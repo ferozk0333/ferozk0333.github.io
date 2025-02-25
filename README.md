@@ -1,4 +1,5 @@
-📍 Seattle, WA | ✉️ ferozk@uw.edu | 🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Complete Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
+📍 Seattle, WA | ✉️ ferozk@uw.edu |
+🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
 
 ## 💻 Technical Skills  
 Python, SQL, AWS, AI Agents, LLMs, NLP, Big Data
