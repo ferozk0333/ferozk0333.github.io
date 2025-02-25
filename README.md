@@ -1,6 +1,16 @@
 📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
 🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/) | 💻 [GitHub](https://github.com/ferozk0333) 
 
+## 🎓 Education  
+**University of Washington, Seattle**  
+*M.S. in Information Management (2024–2026)* | GPA: 3.8/4.0  
+Relevant Coursework: Machine Learning, LLMs, DBMS, Business Intelligence  
+
+**Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
+*B.Tech in Information Technology (2018–2022)* | GPA: 3.98/4.0  
+Chancellor’s Scholarship (Top 5% of program)
+
+---
 
 ## 💼 Professional Experience  
 ### **Oracle Financial Services Software** – Associate Consultant  
@@ -67,16 +77,7 @@
 
 ---
 
-## 🎓 Education  
-**University of Washington, Seattle**  
-*M.S. in Information Management (2024–2026)* | GPA: 3.8/4.0  
-Relevant Coursework: Machine Learning, LLMs, DBMS, Business Intelligence  
 
-**Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
-*B.Tech in Information Technology (2018–2022)* | GPA: 3.98/4.0  
-Chancellor’s Scholarship (Top 5% of program)
-
----
 
 ## 🎖 Leadership & Awards  
 - **Reader/Grader at University of Washington** – Graded 35+ weekly submissions and promptly addressed student queries.
