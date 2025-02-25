@@ -40,10 +40,11 @@
 - Secured 2nd position in the Smart India Hackathon and co-authored a technical research paper on AI’s impact on grassroots social programs.
 
 ### **Research Paper**  
-🔗 **[Download Research Paper (PDF)](https://ferozk0333.github.io/Portfolio-Website/assets/MDM.pdf)**  
-- Co-authored a technical research paper on AI’s impact on grassroots social programs, focusing on real-world applications in data-driven governance.
+📌 **Title**: Mid-Day Meal Analytics Using Machine Learning | International Journal of LNCT, Vol 6(35)
+🔗 **[Download Paper (PDF)](https://ferozk0333.github.io/Portfolio-Website/assets/MDM.pdf)**  
+- Co-authored a technical research paper on AI’s impact on grassroots social programs particularly Mid-Day Meal Scheme, focusing on real-world applications in data-driven governance.
 
-### **Machine Learning Test Score Predictor**  
+### **Machine Learning Based Test Score Predictor**  
 📌 **Technologies**: Regression, AWS CI/CD, Predictive Analytics  
 🔗 **[GitHub Repository](https://github.com/ferozk0333/Machine_Learning_based_Test_Score_Predictor_with_AWS_CI-CD_Deployment)**  
 - Developed an end-to-end linear regression model to predict student exam scores, analyzing data from 10+ socioeconomic features, achieving 90% prediction accuracy.
