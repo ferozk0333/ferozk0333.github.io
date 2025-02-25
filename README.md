@@ -27,14 +27,14 @@
 
 ### **Mental Health Analytics using NLP**  
 📌 **Technologies**: Classification, NLP (NLTK, BERT), Sentiment Analysis  
-🔗 **[Project Page](https://ferozk0333.github.io/Portfolio-Website/project1.html)**  
+🔗 **[Project Details](https://ferozk0333.github.io/Portfolio-Website/project1.html)**  
 - Designed an AI-powered mental health diagnostic tool to assist therapists in rural areas, reducing diagnostic time via actionable visualizations and infographics.
 - Implemented Logistic Regression, Naive Bayes, and applied LLM fine-tuning to DistilBERT for emotion detection, achieving 92% accuracy in sentiment analysis.
 - Led a 4-member team through 3 jury rounds, securing a Top 10 National Finalist position out of 600+ teams at the CSI National Hackathon.
 
 ### **Mid-Day Meal Analytics**  
 📌 **Technologies**: Clustering, ETL Pipelines, MySQL, Power BI  
-🔗 **[Project Page](https://ferozk0333.github.io/Portfolio-Website/project3.html)**  
+🔗 **[Project Details](https://ferozk0333.github.io/Portfolio-Website/project3.html)**  
 - Built an AI-powered analytics system for India’s school meal program (120M+ children), increasing transparency through automated dashboards & alert logs.
 - Developed ETL pipelines to preprocess attendance and meal records; applied DBSCAN clustering to detect hygiene and attendance violations.
 - Secured 2nd position in the Smart India Hackathon and co-authored a technical research paper on AI’s impact on grassroots social programs.
@@ -50,6 +50,19 @@
 - Developed an end-to-end linear regression model to predict student exam scores, analyzing data from 10+ socioeconomic features, achieving 90% prediction accuracy.
 - Built an automated CI/CD data pipeline using AWS (ECR, EC2) and Docker for scalable model deployment.
 - Achieved 10% reduction in mean absolute error (MAE) by employing Artificial Neural Networks (ANN) to capture complex feature interactions.
+
+### **FinSight: Financial Research Assistant with LangChain and OpenAI**  
+📌 **Technologies**: Python, LangChain, FAISS 
+🔗 **[Project Details](https://ferozk0333.github.io/Portfolio-Website/project5.html)**  
+- Built an AI-powered financial research assistant to streamline the workflow of research analysts.
+- Answers complex financial queries based on specific data from news articles and financial reports.
+- Leveraged LangChain, OpenAI's GPT models, and FAISS in-memory vector DB for efficient query Search.
+
+### **Data Visualization using PowerBI**  
+📌 **Technologies**: PowerBI, DAX, MySQL 
+🔗 **[Project Details](https://ferozk0333.github.io/Portfolio-Website/project4.html)**  
+- Identified high-performing regions and underperforming categories, proposing a 15% increase in regional sales through targeted marketing efforts.
+- Incorporated data analysis techniques, specializing in time series analysis to deliver valuable insights, accurate sales forecasting, and interactive dashboard creation, driving business success.
 
 ---
 
