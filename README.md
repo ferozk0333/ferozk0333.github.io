@@ -1,5 +1,5 @@
 📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
-🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
+🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/) | 💻 [GitHub](https://github.com/ferozk0333) 
 
 
 ## 💼 Professional Experience  
@@ -81,7 +81,9 @@ Chancellor’s Scholarship (Top 5% of program)
 - **Reader/Grader at University of Washington** – Graded 35+ weekly submissions and promptly addressed student queries.
 - **Entrepreneurship Lead, Young Indians (Non-Profit)** – Organized 3 leadership summits on EV startups, attracting 500+ participants; increasing vertical visibility by 25%.
 - **Best Delegate, International Model United Nations (MUN)** – Led negotiations, securing a 2/3 majority to pass draft resolution.
-- **Visual Communication & Presentation** – Created a portfolio of 50+ paintings, showcasing artistic creativity.
+- **Chancellor’s Scholarship** – Recipient of the merit award for exemplary academic performance and being in the top 5% of the class.
+- **National Finalists** - Spearheaded team of 4-members to the top 14 national finalists from over 600 participating teams in the CSI InApps National Hackathon.
+- **Visual Communication & Presentation** – Created and managed an art vlog (artsbyferoz.com) featuring 25+ exclusive artworks, demonstrating proficiency in different painting techniques and mediums
 
 ---
 
