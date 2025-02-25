@@ -1,5 +1,24 @@
 # Feroz Khan
 
+<p align="center">
+  <img src="https://github.com/ferozk0333/profile-image.png" width="150" style="border-radius: 50%;">
+</p>
+
+## 👋 About Me
+Aspiring **Machine Learning Engineer / Data Scientist** with a passion for building AI-driven solutions.  
+Currently pursuing **M.S. in Information Management** at the **University of Washington**.  
+Previously worked at **Oracle Financial Services Software** as an Associate Consultant.  
+
+🔬 Interested in **AI Agents, LLMs, NLP, and MLOps**  
+🎯 Open to **Internships & Research Collaborations**  
+📍 Based in **Seattle, WA**  
+
+## 🔗 Connect with Me
+- 🌐 [**GitHub Profile**](https://github.com/ferozk0333)
+- 💼 [**Portfolio Website**](https://ferozk0333.github.io/Portfolio-Website/)
+- 📄 [**Download My Resume (PDF)**](https://drive.google.com/file/d/10qXTUYwb0QBoVxlVZSHVawDi_KVDq2Ay/view)  
+
+
 📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
 🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
 
@@ -33,7 +52,7 @@ Bachelor of Technology in Information Technology _(Aug. 2018 – June 2022)_
 
 ---
 
-## 🚀 AI & Machine Learning Projects  
+## AI & Machine Learning Projects  
 ### **Multi AI Agentic System with Vector DB and LLMs**  
 📌 **Technologies**: AI Agents, RAG, Astra DB, Embeddings  
 🔗 **[GitHub Repository](https://github.com/ferozk0333/Multi-AI-Agentic-RAG-Chatbot-with-AstraDB-and-LLMs)**  
