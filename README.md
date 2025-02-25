@@ -20,7 +20,7 @@ Chancellor’s Scholarship (Top 5% of program)
 
 ---
 
-## AI & Machine Learning Projects  
+## 📑 AI & Machine Learning Projects  
 ### **Multi AI Agentic System with Vector DB and LLMs**  
 📌 **Technologies**: AI Agents, RAG, Astra DB, Embeddings  
 🔗 **[GitHub Repository](https://github.com/ferozk0333/Multi-AI-Agentic-RAG-Chatbot-with-AstraDB-and-LLMs)**  
