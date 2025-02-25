@@ -1,21 +1,18 @@
-# Feroz Khan
-
-📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
-🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Complete Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
+📍 Seattle, WA | ✉️ ferozk@uw.edu | 🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Complete Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
 
 ## 💻 Technical Skills  
 Python, SQL, AWS, AI Agents, LLMs, NLP, Big Data
+
 ---
 
 ## 🎓 Education  
 **University of Washington, Seattle**  
-Master of Science in Information Management _(Sep. 2024 – June 2026)_  
-- **GPA**: 3.8/4.0  
-- **Relevant Coursework**: Machine Learning, Large Language Models, DBMS, Business Intelligence  
+*M.S. in Information Management (2024–2026)* | GPA: 3.8/4.0  
+Relevant Coursework: Machine Learning, LLMs, DBMS, Business Intelligence  
 
 **Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
-Bachelor of Technology in Information Technology _(Aug. 2018 – June 2022)_  
-- **GPA**: 3.98/4.0 | Chancellor’s Scholarship (Top 5% of program)  
+*B.Tech in Information Technology (2018–2022)* | GPA: 3.98/4.0  
+Chancellor’s Scholarship (Top 5% of program)
 
 ---
 
