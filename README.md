@@ -1,7 +1,7 @@
 # Feroz Khan
 
 <p align="center">
-  <img src="https://github.com/ferozk0333/profile-image.png" width="150" style="border-radius: 50%;">
+  <img src="https://github.com/ferozk0333/Feroz_Headshot.jpg" width="150" style="border-radius: 50%;">
 </p>
 
 ## 👋 About Me
