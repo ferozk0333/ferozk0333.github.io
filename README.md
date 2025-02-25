@@ -1,19 +1,5 @@
-📍 Seattle, WA | ✉️ ferozk@uw.edu |
+📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
 🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
-
-## 💻 Technical Skills  
-Python, SQL, AWS, AI Agents, LLMs, NLP, Big Data
-
----
-
-## 🎓 Education  
-**University of Washington, Seattle**  
-*M.S. in Information Management (2024–2026)* | GPA: 3.8/4.0  
-Relevant Coursework: Machine Learning, LLMs, DBMS, Business Intelligence  
-
-**Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
-*B.Tech in Information Technology (2018–2022)* | GPA: 3.98/4.0  
-Chancellor’s Scholarship (Top 5% of program)
 
 ---
 
@@ -54,12 +40,27 @@ Chancellor’s Scholarship (Top 5% of program)
 - Developed ETL pipelines to preprocess attendance and meal records; applied DBSCAN clustering to detect hygiene and attendance violations.
 - Secured 2nd position in the Smart India Hackathon and co-authored a technical research paper on AI’s impact on grassroots social programs.
 
+### **Research Paper**  
+🔗 **[Download Research Paper (PDF)](https://ferozk0333.github.io/Portfolio-Website/assets/MDM.pdf)**  
+- Co-authored a technical research paper on AI’s impact on grassroots social programs, focusing on real-world applications in data-driven governance.
+
 ### **Machine Learning Test Score Predictor**  
 📌 **Technologies**: Regression, AWS CI/CD, Predictive Analytics  
 🔗 **[GitHub Repository](https://github.com/ferozk0333/Machine_Learning_based_Test_Score_Predictor_with_AWS_CI-CD_Deployment)**  
 - Developed an end-to-end linear regression model to predict student exam scores, analyzing data from 10+ socioeconomic features, achieving 90% prediction accuracy.
 - Built an automated CI/CD data pipeline using AWS (ECR, EC2) and Docker for scalable model deployment.
 - Achieved 10% reduction in mean absolute error (MAE) by employing Artificial Neural Networks (ANN) to capture complex feature interactions.
+
+---
+
+## 🎓 Education  
+**University of Washington, Seattle**  
+*M.S. in Information Management (2024–2026)* | GPA: 3.8/4.0  
+Relevant Coursework: Machine Learning, LLMs, DBMS, Business Intelligence  
+
+**Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
+*B.Tech in Information Technology (2018–2022)* | GPA: 3.98/4.0  
+Chancellor’s Scholarship (Top 5% of program)
 
 ---
 
