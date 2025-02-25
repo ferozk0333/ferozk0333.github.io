@@ -1,7 +1,7 @@
 📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
 🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
 
----
+
 ## 💼 Professional Experience  
 ### **Oracle Financial Services Software** – Associate Consultant _(July 2022 – June 2023)_  
 - Developed an unsupervised machine-learning module to detect anomalies in 50K+ customer records, reducing manual intervention by 80% and improving transaction processing time by 30%.
