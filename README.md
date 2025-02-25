@@ -1,35 +1,10 @@
 # Feroz Khan
 
-<p align="center">
-  <img src="https://github.com/ferozk0333/ferozk0333.github.io/tree/main/assets/img/Feroz_Headshot.jpg" width="150" style="border-radius: 50%;">
-</p>
-
-## 👋 About Me
-Aspiring **Machine Learning Engineer / Data Scientist** with a passion for building AI-driven solutions.  
-Currently pursuing **M.S. in Information Management** at the **University of Washington**.  
-Previously worked at **Oracle Financial Services Software** as an Associate Consultant.  
-
-🔬 Interested in **AI Agents, LLMs, NLP, and MLOps**  
-🎯 Open to **Internships & Research Collaborations**  
-📍 Based in **Seattle, WA**  
-
-## 🔗 Connect with Me
-- 🌐 [**GitHub Profile**](https://github.com/ferozk0333)
-- 💼 [**Portfolio Website**](https://ferozk0333.github.io/Portfolio-Website/)
-- 📄 [**Download My Resume (PDF)**](https://drive.google.com/file/d/10qXTUYwb0QBoVxlVZSHVawDi_KVDq2Ay/view)  
-
-
 📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
-🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
+🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Complete Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
 
 ## 💻 Technical Skills  
-- **Programming**: Python, C++, R, SQL  
-- **AI/ML Frameworks**: Scikit-learn, TensorFlow, Keras, Pandas, NumPy, NLTK, LangChain  
-- **Big Data & Visualization**: PySpark, Databricks, Power BI  
-- **Cloud & MLOps**: AWS EC2, AWS S3, CI/CD, Docker, Kubernetes  
-- **Databases & ETL**: SQL Server, Chroma Vector DB, FAISS  
-- **AI Concepts**: NLP, Predictive Modeling, Time Series Forecasting, Generative AI, Multimodal AI  
-
+Python, SQL, AWS, AI Agents, LLMs, NLP, Big Data
 ---
 
 ## 🎓 Education  
