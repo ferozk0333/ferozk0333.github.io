@@ -40,7 +40,8 @@
 - Secured 2nd position in the Smart India Hackathon and co-authored a technical research paper on AI’s impact on grassroots social programs.
 
 ### **Research Paper**  
-📌 **Title**: Mid-Day Meal Analytics Using Machine Learning | International Journal of LNCT, Vol 6(35)
+📌 **Title**: Mid-Day Meal Analytics Using Machine Learning 
+📖 **Journal**: International Journal of LNCT, Vol 6(35)
 🔗 **[Download Paper (PDF)](https://ferozk0333.github.io/Portfolio-Website/assets/MDM.pdf)**  
 - Co-authored a technical research paper on AI’s impact on grassroots social programs particularly Mid-Day Meal Scheme, focusing on real-world applications in data-driven governance.
 
