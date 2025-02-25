@@ -1,55 +1,82 @@
-# Data Scientist
+# Feroz Khan
 
-#### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
+📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
+🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Portfolio](https://ferozk0333.github.io/Portfolio-Website/)  
 
-## Education
-- Ph.D., Physics | The University of Texas at Dallas (_May 2022_)								       		
-- M.S., Physics	| The University of Texas at Dallas (_December 2019_)	 			        		
-- B.S., Physics | The University of Texas at Dallas (_May 2017_)
+## 💻 Technical Skills  
+- **Programming**: Python, C++, R, SQL  
+- **AI/ML Frameworks**: Scikit-learn, TensorFlow, Keras, Pandas, NumPy, NLTK, LangChain  
+- **Big Data & Visualization**: PySpark, Databricks, Power BI  
+- **Cloud & MLOps**: AWS EC2, AWS S3, CI/CD, Docker, Kubernetes  
+- **Databases & ETL**: SQL Server, Chroma Vector DB, FAISS  
+- **AI Concepts**: NLP, Predictive Modeling, Time Series Forecasting, Generative AI, Multimodal AI  
 
-## Work Experience
-**Data Scientist @ Toyota Financial Services (_June 2022 - Present_)**
-- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
-- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+---
 
-**Data Science Consultant @ Shawhin Talebi Ventures LLC (_December 2020 - Present_)**
-- Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios
-- Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes
+## 🎓 Education  
+**University of Washington, Seattle**  
+Master of Science in Information Management _(Sep. 2024 – June 2026)_  
+- **GPA**: 3.8/4.0  
+- **Relevant Coursework**: Machine Learning, Large Language Models, DBMS, Business Intelligence  
 
-## Projects
-### Data-Driven EEG Band Discovery with Decision Trees
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+**Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
+Bachelor of Technology in Information Technology _(Aug. 2018 – June 2022)_  
+- **GPA**: 3.98/4.0 | Chancellor’s Scholarship (Top 5% of program)  
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+---
 
-![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
+## 💼 Professional Experience  
+### **Oracle Financial Services Software** – Associate Consultant _(July 2022 – June 2023)_  
+- Developed an unsupervised machine-learning module to detect anomalies in 50K+ customer records, reducing manual intervention by 80% and improving transaction processing time by 30%.
+- Collaborated with cross-functional teams in an Agile environment to resolve 50+ high-priority issues in SEPA payment processing, minimizing customer impact.
+- Generated 70+ data-driven reports using Oracle DB, gaining expertise in ISO 20022, SWIFT MT/MS, and transaction protocols (Pain001, ICF files, GPPSP).
 
-### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+---
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+## 🚀 AI & Machine Learning Projects  
+### **Multi AI Agentic System with Vector DB and LLMs**  
+📌 **Technologies**: AI Agents, RAG, Astra DB, Embeddings  
+🔗 **[GitHub Repository](https://github.com/ferozk0333/Multi-AI-Agentic-RAG-Chatbot-with-AstraDB-and-LLMs)**  
+- Built an end-to-end Multi-Agent AI RAG chatbot using LangGraph, AstraDB, and LLaMA, optimizing query routing and reducing retrieval latency by 40% through efficient task orchestration and agent-based decision-making.
+- Engineered a 10K+ document vector search pipeline using Hugging Face embeddings, LangChain retrievers, and AstraDB, achieving 20ms low-latency vector similarity search for real-time AI-driven responses.
+- Increased chatbot knowledge coverage by 60% by integrating LLM, LangChain tools, and dynamic prompt engineering, enhancing retrieval precision for out-of-domain queries.
 
-![Bike Study](/assets/img/bike_study.jpeg)
+### **LSTM and GRU Based Context-Aware Next Word Prediction**  
+📌 **Technologies**: Deep Learning, RNN, NLP, TensorFlow  
+🔗 **[GitHub Repository](https://github.com/ferozk0333/Context-Aware-Next-Word-Prediction-Using-LSTM-and-GRU-Networks/tree/main)**  
+- Developed an LSTM & GRU-based model, training on 10,000+ sequences from Shakespeare’s Hamlet, achieving 40% accuracy in 50 epochs and improving with extended training.
+- Implemented tokenization, sequence padding, and softmax-based word prediction, reducing inference latency by 30% in a real-time Streamlit web application.
+- Compared LSTM vs. GRU architectures, demonstrating higher accuracy for LSTM on long sequences while optimizing training efficiency by 8% with GRU’s reduced parameter count.
 
-## Talks & Lectures
-- Causality: The new science of an old question - GSP Seminar, Fall 2021
-- Guest Lecture: Dimensionality Reduction - Big Data and Machine Learning for Scientific Discovery (PHYS 5336), Spring 2021
-- Guest Lecture: Fourier and Wavelet Transforms - Scientific Computing (PHYS 5315), Fall 2020
-- A Brief Introduction to Optimization - GSP Seminar, Fall 2019
-- Weeks of Welcome Poster Competition - UTD, Fall 2019
-- A Brief Introduction to Networks - GSP Seminar, Spring 2019
+### **Mental Health Analytics using NLP**  
+📌 **Technologies**: Classification, NLP (NLTK, BERT), Sentiment Analysis  
+🔗 **[Project Page](https://ferozk0333.github.io/Portfolio-Website/project1.html)**  
+- Designed an AI-powered mental health diagnostic tool to assist therapists in rural areas, reducing diagnostic time via actionable visualizations and infographics.
+- Implemented Logistic Regression, Naive Bayes, and applied LLM fine-tuning to DistilBERT for emotion detection, achieving 92% accuracy in sentiment analysis.
+- Led a 4-member team through 3 jury rounds, securing a Top 10 National Finalist position out of 600+ teams at the CSI National Hackathon.
 
-- [Data Science YouTube](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+### **Mid-Day Meal Analytics**  
+📌 **Technologies**: Clustering, ETL Pipelines, MySQL, Power BI  
+🔗 **[Project Page](https://ferozk0333.github.io/Portfolio-Website/project3.html)**  
+- Built an AI-powered analytics system for India’s school meal program (120M+ children), increasing transparency through automated dashboards & alert logs.
+- Developed ETL pipelines to preprocess attendance and meal records; applied DBSCAN clustering to detect hygiene and attendance violations.
+- Secured 2nd position in the Smart India Hackathon and co-authored a technical research paper on AI’s impact on grassroots social programs.
 
-## Publications
-1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019). DOI: 10.26717/BJSTR.2019.20.003446
-2. Wijeratne, L.O.; Kiv, D.R.; Aker, A.R.; Talebi, S.; Lary, D.J. Using Machine Learning for the Calibration of Airborne Particulate Sensors. Sensors 2020, 20, 99.
-3. Lary, D.J.; Schaefer, D.; Waczak, J.; Aker, A.; Barbosa, A.; Wijeratne, L.O.H.; Talebi, S.; Fernando, B.; Sadler, J.; Lary, T.; Lary, M.D. Autonomous Learning of New Environments with a Robotic Team Employing Hyper-Spectral Remote Sensing, Comprehensive In-Situ Sensing and Machine Learning. Sensors 2021, 21, 2240. https://doi.org/10.3390/s21062240
-4. Zhang, Y.; Wijeratne, L.O.H.; Talebi, S.; Lary, D.J. Machine Learning for Light Sensor Calibration. Sensors 2021, 21, 6259. https://doi.org/10.3390/s21186259
-5. Talebi, S.; Waczak, J.; Fernando, B.; Sridhar, A.; Lary, D.J. Data-Driven EEG Band Discovery with Decision Trees. Preprints 2022, 2022030145 (doi: 10.20944/preprints202203.0145.v1).
-6. Fernando, B.A.; Sridhar, A.; Talebi, S.; Waczak, J.; Lary, D.J. Unsupervised Blink Detection Using Eye Aspect Ratio Values. Preprints 2022, 2022030200 (doi: 10.20944/preprints202203.0200.v1).
-7. Talebi, S. et al. Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales, 29 March 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1499191/v1]
-8. Lary, D.J. et al. (2022). Machine Learning, Big Data, and Spatial Tools: A Combination to Reveal Complex Facts That Impact Environmental Health. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_12
-9. Wijerante, L.O.H. et al. (2022). Advancement in Airborne Particulate Estimation Using Machine Learning. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_13
+### **Machine Learning Test Score Predictor**  
+📌 **Technologies**: Regression, AWS CI/CD, Predictive Analytics  
+🔗 **[GitHub Repository](https://github.com/ferozk0333/Machine_Learning_based_Test_Score_Predictor_with_AWS_CI-CD_Deployment)**  
+- Developed an end-to-end linear regression model to predict student exam scores, analyzing data from 10+ socioeconomic features, achieving 90% prediction accuracy.
+- Built an automated CI/CD data pipeline using AWS (ECR, EC2) and Docker for scalable model deployment.
+- Achieved 10% reduction in mean absolute error (MAE) by employing Artificial Neural Networks (ANN) to capture complex feature interactions.
 
-- [Data Science Blog](https://medium.com/@shawhin)
+---
+
+## 🎖 Leadership & Awards  
+- **Reader/Grader at University of Washington** – Graded 35+ weekly submissions and promptly addressed student queries.
+- **Entrepreneurship Lead, Young Indians (Non-Profit)** – Organized 3 leadership summits on EV startups, attracting 500+ participants; increasing vertical visibility by 25%.
+- **Best Delegate, International Model United Nations (MUN)** – Led negotiations, securing a 2/3 majority to pass draft resolution.
+- **Visual Communication & Presentation** – Created a portfolio of 50+ paintings, showcasing artistic creativity.
+
+---
+
+📌 _This portfolio is a living document and will be updated with new projects and research._
