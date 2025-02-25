@@ -3,7 +3,7 @@
 
 
 ## 💼 Professional Experience  
-### **Oracle Financial Services Software** – Associate Consultant _(July 2022 – June 2023)_  
+### **Oracle Financial Services Software** – Associate Consultant  
 - Developed an unsupervised machine-learning module to detect anomalies in 50K+ customer records, reducing manual intervention by 80% and improving transaction processing time by 30%.
 - Collaborated with cross-functional teams in an Agile environment to resolve 50+ high-priority issues in SEPA payment processing, minimizing customer impact.
 - Generated 70+ data-driven reports using Oracle DB, gaining expertise in ISO 20022, SWIFT MT/MS, and transaction protocols (Pain001, ICF files, GPPSP).
@@ -85,4 +85,4 @@ Chancellor’s Scholarship (Top 5% of program)
 
 ---
 
-📌 _This portfolio is a living document and will be updated with new projects and research._
+_This portfolio is a living document and will be updated with new projects and research._
