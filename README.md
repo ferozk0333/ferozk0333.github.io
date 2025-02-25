@@ -63,17 +63,19 @@ Chancellor’s Scholarship (Top 5% of program)
 - Achieved 10% reduction in mean absolute error (MAE) by employing Artificial Neural Networks (ANN) to capture complex feature interactions.
 
 ### **FinSight: Financial Research Assistant with LangChain and OpenAI**  
-📌 **Technologies**: Python, LangChain, FAISS 
+📌 **Technologies**: Python, LangChain, FAISS  
 🔗 **[Project Details](https://ferozk0333.github.io/Portfolio-Website/project5.html)**  
-- Built an AI-powered financial research assistant to streamline the workflow of research analysts.
-- Answers complex financial queries based on specific data from news articles and financial reports.
-- Leveraged LangChain, OpenAI's GPT models, and FAISS in-memory vector DB for efficient query Search.
+
+- Built an AI-powered financial research assistant to streamline the workflow of research analysts.  
+- Answers complex financial queries based on specific data from news articles and financial reports.  
+- Leveraged LangChain, OpenAI's GPT models, and FAISS in-memory vector DB for efficient query Search.  
 
 ### **Data Visualization using PowerBI**  
-📌 **Technologies**: PowerBI, DAX, MySQL 
+📌 **Technologies**: PowerBI, DAX, MySQL  
 🔗 **[Project Details](https://ferozk0333.github.io/Portfolio-Website/project4.html)**  
-- Identified high-performing regions and underperforming categories, proposing a 15% increase in regional sales through targeted marketing efforts.
-- Incorporated data analysis techniques, specializing in time series analysis to deliver valuable insights, accurate sales forecasting, and interactive dashboard creation, driving business success.
+
+- Identified high-performing regions and underperforming categories, proposing a 15% increase in regional sales through targeted marketing efforts.  
+- Incorporated data analysis techniques, specializing in time series analysis to deliver valuable insights, accurate sales forecasting, and interactive dashboard creation, driving business success.  
 
 ---
 
