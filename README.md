@@ -79,8 +79,6 @@ Chancellor’s Scholarship (Top 5% of program)
 
 ---
 
-
-
 ## 🎖 Leadership & Awards  
 - **Reader/Grader at University of Washington** – Graded 35+ weekly submissions and promptly addressed student queries.
 - **Entrepreneurship Lead, Young Indians (Non-Profit)** – Organized 3 leadership summits on EV startups, attracting 500+ participants; increasing vertical visibility by 25%.
@@ -91,4 +89,3 @@ Chancellor’s Scholarship (Top 5% of program)
 
 ---
 _Explore more of my creative side, including presentation slides, additional projects, and more on my [Detailed Portfolio](https://ferozk0333.github.io/Portfolio-Website/storytelling-and-art.html)._
-
