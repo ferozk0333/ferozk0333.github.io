@@ -27,7 +27,6 @@ Chancellor’s Scholarship (Top 5% of program)
 - Built an end-to-end Multi-Agent AI RAG chatbot using LangGraph, AstraDB, and LLaMA, optimizing query routing and reducing retrieval latency by 40% through efficient task orchestration and agent-based decision-making.
 - Engineered a 10K+ document vector search pipeline using Hugging Face embeddings, LangChain retrievers, and AstraDB, achieving 20ms low-latency vector similarity search for real-time AI-driven responses.
 - Increased chatbot knowledge coverage by 60% by integrating LLM, LangChain tools, and dynamic prompt engineering, enhancing retrieval precision for out-of-domain queries.
-![slide_alex1](https://github.com/user-attachments/assets/ab2a8640-2753-48cf-bbeb-fef6fd2a574b)
 
 ### **LSTM and GRU Based Context-Aware Next Word Prediction**
 🔧 **Technologies**: Deep Learning, RNN, NLP, TensorFlow  
@@ -35,8 +34,6 @@ Chancellor’s Scholarship (Top 5% of program)
 - Developed an LSTM & GRU-based model, training on 10,000+ sequences from Shakespeare’s Hamlet, achieving 40% accuracy in 50 epochs and improving with extended training.
 - Implemented tokenization, sequence padding, and softmax-based word prediction, reducing inference latency by 30% in a real-time Streamlit web application.
 - Compared LSTM vs. GRU architectures, demonstrating higher accuracy for LSTM on long sequences while optimizing training efficiency by 8% with GRU’s reduced parameter count.
-
-![slide_alex](https://github.com/user-attachments/assets/64d884ab-b2b0-4110-82c2-01471866056b)
 
 ### **Mental Health Analytics using NLP**
 🔧 **Technologies**: Classification, NLP (NLTK, BERT), Sentiment Analysis  
