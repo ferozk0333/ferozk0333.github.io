@@ -1,5 +1,5 @@
 📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
-🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Presentation Portfolio](https://ferozk0333.github.io/Portfolio-Website/) | 💻 [GitHub](https://github.com/ferozk0333) 
+🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Presentation Portfolio](https://ferozk0333.github.io/Portfolio-Website/storytelling-and-art.html) | 💻 [GitHub](https://github.com/ferozk0333) 
 
 ## 🎓 Education  
 **University of Washington, Seattle**  
@@ -88,4 +88,4 @@ Chancellor’s Scholarship (Top 5% of program)
 - **Visual Communication & Presentation** – Created and managed an art vlog (artsbyferoz.com) featuring 25+ exclusive artworks, demonstrating proficiency in different painting techniques and mediums
 
 ---
-_Explore more of my creative side, including presentation slides, additional projects, and more on my [Detailed Portfolio](https://ferozk0333.github.io/Portfolio-Website/storytelling-and-art.html)._
+_Explaining complex technical concepts to business stakeholders is an art. Explore some of my creative presentation slides here on my [Presentation Portfolio](https://ferozk0333.github.io/Portfolio-Website/storytelling-and-art.html)._
