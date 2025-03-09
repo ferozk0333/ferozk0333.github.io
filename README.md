@@ -1,6 +1,12 @@
 📍 Seattle, WA | ✉️ ferozk@uw.edu | 📞 206-306-4462  
 🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Presentation Portfolio](https://ferozk0333.github.io/Portfolio-Website/) | 💻 [GitHub](https://github.com/ferozk0333) 
 
+## 🏆 About Me  
+I am a passionate **Data Scientist and Machine Learning Engineer** with experience in **AI/ML, Data Science, and Software Engineering**. I enjoy solving real-world problems using **data-driven insights, predictive analytics, and scalable machine learning models**. My interests include **LLMs, AI Agents, NLP, and Data Visualization**.  
+
+I have a background in **software development** and have worked in the **fintech industry**, where I built and optimized **AI-driven solutions** for large-scale data processing and anomaly detection.  
+
+---
 ## 🎓 Education  
 **University of Washington, Seattle**  
 *M.S. in Information Management (2024–2026)* | GPA: 3.8/4.0  
@@ -22,7 +28,7 @@ Chancellor’s Scholarship (Top 5% of program)
 
 ## 📑 Machine Learning Projects  
 ### **Multi AI Agentic System with Vector DB and LLMs**
-**Technologies**: AI Agents, RAG, Astra DB, Embeddings  
+🔧 **Technologies**: AI Agents, RAG, Astra DB, Embeddings  
 🔗 **[GitHub Repository](https://github.com/ferozk0333/Multi-AI-Agentic-RAG-Chatbot-with-AstraDB-and-LLMs)**  
 - Built an end-to-end Multi-Agent AI RAG chatbot using LangGraph, AstraDB, and LLaMA, optimizing query routing and reducing retrieval latency by 40% through efficient task orchestration and agent-based decision-making.
 - Engineered a 10K+ document vector search pipeline using Hugging Face embeddings, LangChain retrievers, and AstraDB, achieving 20ms low-latency vector similarity search for real-time AI-driven responses.
