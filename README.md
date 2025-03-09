@@ -4,7 +4,7 @@
 ## 🎓 Education  
 **University of Washington, Seattle**  
 *M.S. in Information Management (2024–2026)* | GPA: 3.8/4.0  
-Relevant Coursework: Machine Learning, LLMs, DBMS, Business Intelligence  
+Relevant Coursework: Machine Learning, LLMs, SQL DBMS
 
 **Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
 *B.Tech in Information Technology (2018–2022)* | GPA: 3.98/4.0  
