@@ -36,6 +36,8 @@ Chancellor’s Scholarship (Top 5% of program)
 - Implemented tokenization, sequence padding, and softmax-based word prediction, reducing inference latency by 30% in a real-time Streamlit web application.
 - Compared LSTM vs. GRU architectures, demonstrating higher accuracy for LSTM on long sequences while optimizing training efficiency by 8% with GRU’s reduced parameter count.
 
+![slide_alex](https://github.com/user-attachments/assets/64d884ab-b2b0-4110-82c2-01471866056b)
+
 ### **Mental Health Analytics using NLP**
 🔧 **Technologies**: Classification, NLP (NLTK, BERT), Sentiment Analysis  
 🔗 **[Project Details](https://ferozk0333.github.io/Portfolio-Website/project1.html)**  
