@@ -4,7 +4,7 @@
 ## 🎓 Education  
 **University of Washington, Seattle**  
 *M.S. in Information Management (2024–2026)* | GPA: 3.8/4.0  
-Relevant Coursework: Machine Learning, LLMs, SQL DBMS
+Relevant Coursework: Machine Learning, LLMs, SQL DBMS, Statistics
 
 **Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
 *B.Tech in Information Technology (2018–2022)* | GPA: 3.98/4.0  
@@ -14,7 +14,7 @@ Chancellor’s Scholarship (Top 5% of program)
 
 ## 💼 Professional Experience  
 ### **Oracle Financial Services Software** – Associate Consultant  
-- Implemented K-Means clustering module to detect anomalies in 50K+ customer records, reducing manual intervention by 80% and improving transaction processing time by 30%.
+- Implemented K-Means clustering module to detect anomalies in 100K+ customer records, reducing manual intervention by 80% and improving transaction processing time by 30%.
 - Collaborated with cross-functional teams in an Agile environment to resolve 50+ high-priority issues in SEPA payment processing, minimizing customer impact.
 - Generated 70+ data-driven reports using Oracle DB, gaining expertise in ISO 20022, SWIFT MT/MS, and transaction protocols (Pain001, ICF files, GPPSP).
 
@@ -31,15 +31,15 @@ Chancellor’s Scholarship (Top 5% of program)
 ### **LSTM and GRU RNN Based Context-Aware Next Word Prediction**
 🔧 **Technologies**: Deep Learning, RNN, NLP, TensorFlow  
 🔗 **[GitHub Repository](https://github.com/ferozk0333/Context-Aware-Next-Word-Prediction-Using-LSTM-and-GRU-Networks/tree/main)**  
-- Trained RNN model on 10,000+ sequences from Shakespeare’s Hamlet, achieving 40% accuracy in 50 epochs.
+- Trained RNN model on 10,000+ sequences from Shakespeare’s Hamlet, achieving 80% accuracy in 50 epochs.
 - Implemented tokenization, sequence padding, and softmax-based word prediction, reducing inference latency by 30%.
 - Compared LSTM and GRU architectures, demonstrating higher accuracy for LSTM on long sequences while optimizing training efficiency by 8% with GRU’s reduced parameter count.
 
 ### **Mental Health Analytics using NLP**
-🔧 **Technologies**: Classification, NLP (NLTK, BERT), Sentiment Analysis  
+🔧 **Technologies**: Classification, NLP (NLTK, BERT), Sentiment Analysis, SMOTE  
 🔗 **[Project Details](https://ferozk0333.github.io/Portfolio-Website/project1.html)**  
 - Designed mental health diagnostic tool to assist therapists in rural regions, reducing diagnostic time via actionable visualizations and infographics.
-- Implemented Logistic Regression, Naive Bayes, and applied LLM fine-tuning to DistilBERT for emotion detection, achieving 95% accuracy in sentiment analysis.
+- Implemented Logistic Regression, Naive Bayes, and applied LLM fine-tuning to DistilBERT for emotion detection, achieving 92% accuracy in sentiment analysis.
 - Led a 4-member team through 3 jury rounds, securing a Top 10 National Finalist position out of 600+ teams at the CSI National Hackathon.
 
 ### **Mid-Day Meal Analytics**  
