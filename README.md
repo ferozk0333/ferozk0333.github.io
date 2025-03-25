@@ -13,10 +13,12 @@ Chancellor’s Scholarship (Top 5% of program)
 ---
 
 ## 💼 Professional Experience  
-### **Oracle Financial Services Software** – Associate Consultant  
-- Implemented K-Means clustering module to detect anomalies in 100K+ customer records, reducing manual intervention by 80% and improving transaction processing time by 30%.
-- Collaborated with cross-functional teams in an Agile environment to resolve 50+ high-priority issues in SEPA payment processing, minimizing customer impact.
-- Generated 70+ data-driven reports using Oracle DB, gaining expertise in ISO 20022, SWIFT MT/MS, and transaction protocols (Pain001, ICF files, GPPSP).
+### **Oracle Financial Services Software** – Associate Consultant 
+- Applied K-Means to cluster 100K+ records, identifying spending patterns and reducing manual customer segmentation by 80%. 
+- Implemented Python scripts for data transformation & automated source file processing, saving 25 hours of manual work weekly. 
+- Optimized Oracle DB SQL queries to generate 70+ reports, gaining expertise in ISO 20022, SWIFT MT/MS, and payment protocols. 
+- Resolved 50+ high-priority SEPA payment processing issues by collaborating with cross-functional teams, minimizing downtime.
+- Designed Power BI dashboards for stakeholders to visualize incident resolution trends, boosting operational efficiency by 20%. 
 
 ---
 
@@ -81,7 +83,7 @@ Chancellor’s Scholarship (Top 5% of program)
 
 ## 🎖 Leadership & Awards  
 - **Reader/Grader at University of Washington** – Graded 35+ weekly submissions and promptly addressed student queries.
-- **Entrepreneurship Lead, Young Indians (Non-Profit)** – Organized 3 leadership summits on EV startups, attracting 500+ participants; increasing vertical visibility by 25%.
+- **Entrepreneurship Lead, Young Indians (Non-Profit)** –  Led a cross-functional team of 40 members to organize 3-day symposium featuring workshops & guest lectures; managed 3 leadership summits with 500+ participants, increasing vertical visibility by 25%.
 - **Best Delegate, International Model United Nations (MUN)** – Led negotiations, securing a 2/3 majority to pass draft resolution.
 - **Chancellor’s Scholarship** – Recipient of the merit award for exemplary academic performance and being in the top 5% of the class.
 - **National Finalists** - Spearheaded team of 4-members to the top 14 national finalists from over 600 participating teams in the CSI InApps National Hackathon.
