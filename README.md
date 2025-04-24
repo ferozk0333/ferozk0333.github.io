@@ -13,12 +13,12 @@ Chancellor’s Scholarship (Top 5% of program)
 ---
 
 ## 💼 Professional Experience  
-### **Oracle Financial Services Software** – Associate Consultant 
-- Applied K-Means to cluster 100K+ records, identifying spending patterns and reducing manual customer segmentation by 80%. 
-- Implemented Python scripts for data transformation & automated source file processing, saving 25 hours of manual work weekly. 
-- Optimized Oracle DB SQL queries to generate 70+ reports, gaining expertise in ISO 20022, SWIFT MT/MS, and payment protocols. 
-- Resolved 50+ high-priority SEPA payment processing issues by collaborating with cross-functional teams, minimizing downtime.
-- Designed Power BI dashboards for stakeholders to visualize incident resolution trends, boosting operational efficiency by 20%. 
+### **Oracle Financial Services Software** – Associate Consultant (Data Team) 
+- Fine-tuned FastText embeddings on financial transaction documents to improve classification of payment intent (bill, salary, fraud), outperforming Word2Vec by 15% in internal evaluations and supporting downstream compliance workflows.
+- Built and deployed anomaly detection models using K-Means on transaction metadata to flag early SEPA-related issues, contributing to a 15% reduction in technical incidents for banking application.
+- Automated data preprocessing pipelines using Python, applying regex-based cleaning and currency normalization across multi-format financial logs; optimized SQL queries to streamline ingestion, saving 25 hours of manual work weekly.
+- Developed Data visualization Power BI dashboards to track incident metrics and system KPIs, delivering actionable insights to leadership and boosting operational efficiency by 20%.
+
 
 ---
 
