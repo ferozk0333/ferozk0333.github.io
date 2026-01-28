@@ -4,12 +4,12 @@
 ## 🎓 Education  
 **University of Washington, Seattle**  
 *M.S. in Information Management (Data Science specialization)* | GPA: 3.8/4.0
-Honors: Donald & Lynda Horowitz Endowed Fellowship (merit-based; responsible AI)
-Relevant Coursework: Machine Learning, Building & Applying LLMs, Statistics
+- Honors: Donald & Lynda Horowitz Endowed Fellowship (merit-based; responsible AI)
+- Relevant Coursework: Machine Learning, Building & Applying LLMs, Statistics
 
 **Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal**  
 *B.Tech in Information Technology (2018–2022)* | GPA: 3.98/4.0
-Honors: Chancellor’s Scholarship (Top 5% of program)
+- Honors: Chancellor’s Scholarship (Top 5% of program)
 
 ---
 
