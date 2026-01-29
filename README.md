@@ -2,7 +2,6 @@
 🔗 [LinkedIn](https://www.linkedin.com/in/ferozkhan2) | 🌐 [Presentation Portfolio](https://ferozk0333.github.io/Portfolio-Website/storytelling-and-art.html) | 💻 [GitHub](https://github.com/ferozk0333) 
 
 I am a graduate student at the University of Washington, pursuing a M.S. in Information Management (Data Science specialization). I obtained my undergraduate degree in Information Technology, and I will be graduating from UW in June 2026.
----
 
 ## 🎓 Education  
 **University of Washington, Seattle**  
