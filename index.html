@@ -46,10 +46,14 @@
       <!-- Card 1 -->
       <article class="card">
         <h3>Fine-Tuning CNN Architectures Using Transfer Learninge</h3>
-        <p class="meta">Problem → approach → measurable outcome (1 line).</p>
-        <p>2–3 lines: what you built, what data you used, and what you achieved.</p>
+        <p class="meta">Baseline CNN → VGG16/ResNET fine-tuning → +4.5% accuracy (91% → 95.5%)..</p>
+        <p>Fine-tuned pretrained VGG16 on Fashion MNIST using a custom PyTorch Dataset + ETL pipeline.
+          Frozen backbone, replaced classifier head, tuned with K-Fold + Optuna for generalization.</p>
         <div class="tags">
-          <span class="tag">Transfer Learning</span><span class="tag">RAG</span><span class="tag">FastAPI</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Transfer Learning</span>
+          <span class="tag">Optuna</span>
+          <span class="tag">Computer Vision</span>
         </div>
         <p style="margin:12px 0 0 0">
           <a href="https://github.com/ferozk0333">Code</a> ·
