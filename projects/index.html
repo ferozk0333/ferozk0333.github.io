@@ -230,16 +230,55 @@
       </p>
     </div>
 
-    <div class="card" id="project-2">
-      <h3>Project 2: Title</h3>
-      <p class="meta">Tech: … · Outcome: …</p>
-      <p>
-        Problem: …<br/>
-        Approach: …<br/>
-        Result: …
+
+
+    <div class="card" id="project-6">
+      <h3>End-to-End Regression ML System with AWS CI/CD</h3>
+    
+      <p class="meta">
+        <strong>Tech:</strong> Regression, Scikit-learn, Pandas, Flask, Docker, GitHub Actions, AWS (ECR, EC2)  
+        · <strong>Dataset:</strong> Student performance tabular dataset (~1,000 rows, mixed numeric + categorical)  
+        · <strong>Outcome:</strong> MAE 3.8 · RMSE 5.1 · R² 0.89 (test)
       </p>
-      <p><a href="https://github.com/your-username/project2">Repository</a></p>
+    
+      <p><strong>Context</strong><br/>
+      Built a production-style regression system to predict student exam scores from demographic and academic signals, packaged as a web app and deployed on AWS with CI/CD.</p>
+    
+      <p><strong>Pipeline & Modeling</strong></p>
+      <ul>
+        <li><strong>Ingestion:</strong> Raw CSV train/test split with logging for traceability</li>
+        <li><strong>Transformation:</strong> Missing/duplicate handling, One-Hot Encoding for categorical features, StandardScaler for numeric features</li>
+        <li><strong>Feature Selection:</strong> Correlation pruning + L1 regularization to reduce multicollinearity and remove noisy features</li>
+        <li><strong>Modeling:</strong> Ridge/Lasso/ElasticNet regression with hyperparameter tuning (CV) to control overfitting</li>
+        <li><strong>Artifacts:</strong> Persisted preprocessor + best model as versioned pickle artifacts for consistent inference</li>
+      </ul>
+
+      <p><strong>High Level Workflow</strong></p>
+      <img 
+        src="../assets/images/regression.png" 
+        alt="Architecture Diagram"
+        style="width:100%; max-width:750px; border-radius:8px; margin:10px 0;"
+      />
+      <p><strong>Results</strong><br/>
+      Achieved <strong>MAE 3.8</strong> and <strong>RMSE 5.1</strong> on held-out test data (R² <strong>0.89</strong>). Regularization reduced train–test gap and improved stability vs an unregularized baseline (MAE 5.0, RMSE 6.6).</p>
+    
+      <p><strong>Deployment & MLOps</strong><br/>
+      Containerized Flask inference service, pushed images to <strong>AWS ECR</strong>, deployed on <strong>EC2</strong>, and automated build/test/deploy with <strong>GitHub Actions</strong>. Designed the system so model + preprocessor artifacts can be swapped without rewriting the app.</p>
+    
+      <p><strong>Key Design Decisions</strong><br/>
+      Used L1/L2 regularization for generalization under correlated features, enforced consistent preprocessing via saved pipelines, and chose Docker + ECR for repeatable deployments and environment parity.</p>
+    
+      <p>
+        <a href="https://github.com/ferozk0333/Machine_Learning_based_Test_Score_Predictor_with_AWS_CI-CD_Deployment">Repository</a>
+      </p>
     </div>
+
+
+
+
+
+    
+
   </div>
 </body>
 </html>
