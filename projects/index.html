@@ -178,7 +178,58 @@
       </p>
     </div>
 
+
+
+
+
+
+
+    <div class="card" id="project-5">
+      <h3>End-to-End Sales BI Pipeline & Dashboard</h3>
     
+      <p class="meta">
+        <strong>Tech:</strong> MySQL, Power Query, Airflow, Power BI  
+        · <strong>Dataset:</strong> ~150K OLTP sales transactions  
+        · <strong>Outcome:</strong> 20% reduction in ad-hoc analysis · Real-time KPI visibility
+      </p>
+    
+      <p><strong>Context</strong><br/>
+      Built a scalable BI pipeline to transform raw transactional sales data into structured analytics-ready datasets, enabling stakeholders to monitor revenue, customer performance, and product trends in real time.</p>
+    
+      <p><strong>Architecture & Pipeline</strong></p>
+      <ul>
+        <li><strong>Data Model:</strong> Designed star schema with fact (transactions) and dimensions (customer, product, market, date)</li>
+        <li><strong>ETL:</strong> Cleaned and transformed ~150K records using SQL + Power Query (handled duplicates, nulls, invalid entries, format standardization)</li>
+        <li><strong>Orchestration:</strong> Migrated workflow to Airflow for automated scheduling and improved scalability</li>
+        <li><strong>Integration:</strong> Connected directly to MySQL for centralized, near real-time data access</li>
+      </ul>
+    
+      <p><strong>Analytics & Visualization</strong></p>
+      <ul>
+        <li>Built KPI dashboards tracking revenue, sales quantity, top customers, and product contribution</li>
+        <li>Implemented <strong>Decomposition Trees</strong> to analyze drivers of order profit and identify underperforming segments</li>
+        <li>Enabled drill-down views by region, product category, and customer segment</li>
+      </ul>
+
+      <p><strong>Dashboard Preview</strong></p>
+      <img 
+        src="../assets/images/powerbi1.png" 
+        alt="Architecture Diagram"
+        style="width:100%; max-width:750px; border-radius:8px; margin:10px 0;"
+      />
+      <img 
+        src="../assets/images/powerbi2.png" 
+        alt="Architecture Diagram"
+        style="width:100%; max-width:750px; border-radius:8px; margin:10px 0;"
+      />
+      <p><strong>Results</strong><br/>
+      Reduced manual reporting and ad-hoc analysis by ~20%, improved decision latency, and provided actionable insights into regional revenue trends and product performance.</p>
+    
+      <p>
+        <a href="https://github.com/ferozk0333/Sales_Insight_Using_PowerBI_MySQL">Repository</a>
+      </p>
+    </div>
+
     <div class="card" id="project-2">
       <h3>Project 2: Title</h3>
       <p class="meta">Tech: … · Outcome: …</p>
