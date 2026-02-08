@@ -40,7 +40,7 @@
       <ul>
         <li>Converted 28×28 grayscale → 3-channel RGB; applied Resize / CenterCrop / Normalize transforms</li>
         <li>Built custom PyTorch Dataset + DataLoader ETL pipeline</li>
-        <li>Loaded pretrained VGG16 (ImageNet), froze backbone, replaced classifier head</li>
+        <li>Loaded pretrained VGG16 (ImageNet) and ResNET models, froze backbone, replaced classifier head with custom head</li>
         <li>Trained with CrossEntropy + Adam using K-Fold CV and Bayesian Optuna tuning</li>
       </ul>
     
