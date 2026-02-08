@@ -43,7 +43,14 @@
         <li>Loaded pretrained VGG16 (ImageNet) and ResNET models, froze backbone, replaced classifier head with custom head</li>
         <li>Trained with CrossEntropy + Adam using K-Fold CV and Bayesian Optuna tuning</li>
       </ul>
-    
+
+      <p><strong>Architecture</strong></p>
+      <img 
+        src="assets/images/vgg16-transfer-learning.png" 
+        alt="VGG16 Transfer Learning Architecture Diagram"
+        style="width:100%; max-width:750px; border-radius:8px; margin:10px 0;"
+      />
+
       <p><strong>Result</strong><br/>
       Improved accuracy to 95.5% (+4.5%), reduced overfitting via weight decay tuning, and achieved faster convergence vs training from scratch for a domain-specific, smaller dataset.</p>
     
