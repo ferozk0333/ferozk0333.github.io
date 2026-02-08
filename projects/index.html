@@ -64,6 +64,48 @@
 
 
 
+    <div class="card" id="project-2">
+      <h3>Sentiment Analysis for Healthcare Domain with NLP & MLOps</h3>
+    
+      <p class="meta">
+        <strong>Tech:</strong> Python, Scikit-learn, MLflow, SQL  
+        · <strong>Dataset:</strong> Govt. of India survey data (~15,000 anonymized patient text entries) + Kaggle sentiment dataset  
+        · <strong>Outcome:</strong> 80% Accuracy · 0.84 ROC-AUC · 12% F1 disparity reduction
+      </p>
+    
+      <p><strong>Context</strong><br/>
+      Built an NLP classification system to analyze rural patient text and assist urban therapists with sentiment signals and recurring thought categorization across 7 predefined mental health concern classes.</p>
+    
+      <p><strong>Approach</strong></p>
+      <ul>
+        <li><strong>Pipeline:</strong> Standardized preprocessing (tokenization, stopword removal, TF-IDF), strict train/validation split to prevent leakage, normalized SQL schema for storing predictions and metadata.</li>
+        <li><strong>Database:</strong> Designed and normalized SQL database to store text entries, timespamp, sensitive PII information. Wrote queries with JOINs. </li>        
+        <li><strong>Models:</strong> Multinomial Naive Bayes (baseline) vs Logistic Regression (self-trained model).</li>
+        <li><strong>Experiments:</strong> MLflow-based tracking of hyperparameters, metrics, model artifacts, and version comparisons.</li>
+      </ul>
+      <p><strong>Architecture</strong></p>
+      <img 
+        src="../assets/images/MentalHealth.png" 
+        alt="Architecture Diagram"
+        style="width:100%; max-width:750px; border-radius:8px; margin:10px 0;"
+      />
+      <p><strong>Results</strong><br/>
+      Logistic Regression improved accuracy from 72% (Naive Bayes baseline) to <strong>94.65%</strong>, increased ROC-AUC to <strong>0.84</strong>, and reduced cross-demographic F1 disparity by <strong>12%</strong> via class rebalancing and threshold calibration. Improved recall for high-risk categories by 9%.</p>
+    
+      <p>
+        <a href="https://github.com/ferozk0333/Mental-Health-Analytics-using-NLP">Repository</a>
+      </p>
+      <p>
+        <a href="https://mental-health-analytics.streamlit.app/">Prototype</a>
+      </p>
+    </div>
+    
+    <div style="height:14px"></div>
+
+
+
+
+    
     
     <div class="card" id="project-2">
       <h3>Project 2: Title</h3>
