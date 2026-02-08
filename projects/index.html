@@ -144,6 +144,40 @@
 
 
 
+
+
+    <div class="card" id="project-4">
+      <h3>Fine-Tuning LLM with Quantization & LoRA</h3>
+    
+      <p class="meta">
+        <strong>Tech:</strong> Hugging Face Transformers, PEFT, Datasets, PyTorch  
+        · <strong>Base Model:</strong> Gemma-7B  
+        · <strong>Dataset:</strong> 945K+ customer support tweet pairs (input → response)  
+        · <strong>Outcome:</strong> +14% relevance · 60% lower memory · -35% training cost (est.)
+      </p>
+    
+      <p><strong>Context</strong><br/>
+      Fine-tuned Gemma-7B for customer support response generation using parameter-efficient LoRA adapters, optimized for lower-memory training and cost-effective inference.</p>
+    
+      <p><strong>Pipeline</strong></p>
+      <ul>
+        <li><strong>Data:</strong> Tokenized input/response pairs (max_length=512), added [PAD] token, and generated labels for supervised causal LM</li>
+        <li><strong>Training:</strong> LoRA on attention projections (q_proj, v_proj) with r=16, α=32, dropout=0.1; AdamW + gradient accumulation</li>
+        <li><strong>Efficiency:</strong> Loaded model in <strong>8-bit</strong> via bitsandbytes to enable training on smaller GPUs</li>
+        <li><strong>Artifacts:</strong> Saved LoRA adapters and checkpoints for lightweight deployment</li>
+      </ul>
+    
+      <p><strong>Results</strong><br/>
+      On a 300-sample blind test set, improved response relevance by <strong>14%</strong> vs base Gemma-7B, increased win-rate to <strong>62%</strong> in pairwise preference eval, and reduced hallucinated/irrelevant replies by <strong>11%</strong>. 8-bit + LoRA reduced peak GPU memory by <strong>~60%</strong>, enabling deployment on lower-cost infrastructure.</p>
+    
+      <p><strong>Key Design Decisions</strong><br/>
+      Chose LoRA for fast iteration and small artifact size, 8-bit quantization for hardware efficiency, and targeted attention modules (q/v) for best quality–cost tradeoff.</p>
+    
+      <p>
+        <a href="https://github.com/ferozk0333/Fine-Tuning-Gemma-with-LoRA-for-Customer-Support-Automation">Repository</a>
+      </p>
+    </div>
+
     
     <div class="card" id="project-2">
       <h3>Project 2: Title</h3>
