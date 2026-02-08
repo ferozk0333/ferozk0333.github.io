@@ -33,7 +33,7 @@
         · <strong>Outcome:</strong> 91% → 95.5% Accuracy
       </p>
     
-      <p><strong>Problem</strong><br/>
+      <p><strong>Context</strong><br/>
       Baseline CNN plateaued at 91% accuracy; required stronger generalization on limited labeled data.</p>
     
       <p><strong>Approach</strong></p>
@@ -95,17 +95,55 @@
       <p>
         <a href="https://github.com/ferozk0333/Mental-Health-Analytics-using-NLP">Repository</a>
       </p>
-      <p>
-        <a href="https://mental-health-analytics.streamlit.app/">Prototype</a>
-      </p>
     </div>
-    
     <div style="height:14px"></div>
 
 
 
 
     
+    <div class="card" id="project-3">
+      <h3>Agentic RAG with Hallucination Filtering & Self-Reflection</h3>
+    
+      <p class="meta">
+        <strong>Tech:</strong> LangGraph, LangChain, FAISS, OpenAI APIs, FastAPI, Docker, AWS  
+        · <strong>Dataset:</strong> 5,000+ indexed documents + live web search  
+        · <strong>Outcome:</strong> +15% GPT-Judge accuracy · 20% redundancy reduction
+      </p>
+    
+      <p><strong>Context</strong><br/>
+      Designed an agentic Retrieval-Augmented Generation (RAG) system to reduce hallucinations and improve factual grounding in multi-domain question answering.</p>
+    
+      <p><strong>Approach</strong></p>
+      <ul>
+        <li><strong>Routing:</strong> Query classification to vector DB (FAISS) or Tavily web search</li>
+        <li><strong>Retrieval:</strong> Embedding pipeline with MMR + multi-query expansion to improve recall and reduce redundancy</li>
+        <li><strong>Generation:</strong> Context-aware answer synthesis using OpenAI APIs</li>
+        <li><strong>Validation:</strong> Binary hallucination grading (LLM + NLI) with adaptive self-reflection and query rewriting</li>
+        <li><strong>Flow Control:</strong> LangGraph state machine for modular agent orchestration</li>
+      </ul>
+      <p><strong>Architecture</strong></p>
+      <img 
+        src="../assets/images/rag.png" 
+        alt="Architecture Diagram"
+        style="width:100%; max-width:750px; border-radius:8px; margin:10px 0;"
+      />
+      <p><strong>Metrics</strong><br/>
+      Improved GPT-Judge factual accuracy by <strong>15%</strong> vs baseline RAG, reduced retrieval redundancy by <strong>20%</strong>, and decreased hallucination rate by <strong>18%</strong> in simulated evaluation.</p>
+    
+      <p><strong>Deployment & MLOps</strong><br/>
+      Containerized with Docker, deployed on AWS EC2/SageMaker, CI/CD via GitHub Actions, and exposed scalable FastAPI endpoints with Pydantic validation.</p>
+    
+      <p><strong>Key Design Decisions</strong><br/>
+      Adopted agentic routing for modularity, integrated automated hallucination grading for reliability, and prioritized retrieval diversity (MMR + multi-query) to improve grounding.</p>
+    
+      <p>
+        <a href="#">Repository</a>
+      </p>
+    </div>
+
+
+
     
     <div class="card" id="project-2">
       <h3>Project 2: Title</h3>
