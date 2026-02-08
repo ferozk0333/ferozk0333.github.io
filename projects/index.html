@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects — Your Name</title>
+  <title>Projects — Feroz Khan</title>
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
@@ -11,29 +11,39 @@
     <div class="nav">
       <div class="left"><a href="../">← Home</a></div>
       <div class="navlinks">
-        <a href="../assets/Your_Resume.pdf">Resume</a>
-        <a href="https://github.com/your-username">GitHub</a>
+        <a href="https://drive.google.com/drive/folders/1r66grJ7YAS4UBYX32mdgBNJfvxTGNN2G?usp=sharing">Resume</a>
+        <a href="https://github.com/ferozk0333">GitHub</a>
       </div>
     </div>
 
     <section class="hero">
       <h1>Projects</h1>
-      <p class="sub">Short, readable write-ups. Each one links to code + results.</p>
+      <p class="sub">Short and readable write-ups.</p>
     </section>
 
-    <div class="card" id="project-1">
-      <h3>Project 1: Title</h3>
-      <p class="meta">Tech: Python, X, Y · Dataset: Z · Outcome: metric</p>
-      <p>
-        Problem: …<br/>
-        Approach: …<br/>
-        Result: … (include one number)
-      </p>
-      <p><a href="https://github.com/your-username/project-repo">Repository</a></p>
-    </div>
 
+
+    
+    <div class="card" id="project-1">
+      <h3>Fine-Tuning CNN Architectures Using Transfer Learning</h3>
+      <p class="meta">
+        Tech: PyTorch, Transfer Learning, Optuna, GPU · Dataset: Fashion MNIST · Outcome: Accuracy 91% → 95.5%
+      </p>
+      <p>
+        Problem: Baseline CNN plateaued at 91% accuracy on Fashion MNIST; needed stronger generalization on limited labeled data.<br/>
+        Approach: Converted 28×28 grayscale → 3-channel RGB, applied Resize/CenterCrop/Normalize transforms, built custom PyTorch Dataset + DataLoader ETL pipeline. Loaded pretrained VGG16 (ImageNet), froze convolutional backbone, replaced classifier head, trained with CrossEntropy + Adam using K-Fold CV and Bayesian Optuna tuning.<br/>
+        Result: Improved accuracy to 95.5% (+4.5%), reduced overfitting via weight decay tuning, and achieved faster convergence vs training from scratch.
+      </p>
+      <p>
+        <a href="https://github.com/your-username/project-repo">Repository</a>
+      </p>
+    </div>
+    
     <div style="height:14px"></div>
 
+
+
+    
     <div class="card" id="project-2">
       <h3>Project 2: Title</h3>
       <p class="meta">Tech: … · Outcome: …</p>
