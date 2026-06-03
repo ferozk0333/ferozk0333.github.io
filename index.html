@@ -1,185 +1,639 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Feroz Khan - Portfolio</title>
-  <meta name="description" content="Data Science + MLOps projects: pipelines, ML systems, deployment, and analytics." />
-  <link rel="stylesheet" href="assets/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feroz Khan — Data Scientist & ML Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:#faf7f2;--cream2:#f3ede3;--cream3:#e9e0d0;--sand:#d9cdb8;
+  --ink:#1e1a14;--ink2:#5c5240;--ink3:#9c8e7a;--ink4:#bfb099;--white:#fffefb;
+  --rose:#c8707a;--rose-l:#f7ecee;--rose-m:#edd0d3;
+  --teal:#4a9080;--teal-l:#e6f3f0;--teal-m:#b8ddd7;
+  --amber:#c4852a;--amber-l:#fdf3e3;--amber-m:#f0d5a8;
+  --plum:#7b5ea7;--plum-l:#f0ebfb;--plum-m:#cfc0ec;
+  --blue:#3d6fa8;--blue-l:#e8f0fb;--blue-m:#b8cef0;
+  --green:#4a8a5a;--green-l:#e8f5ec;--green-m:#b8ddc4;
+  --sh1:0 2px 12px rgba(30,26,20,.06);
+  --sh2:0 6px 28px rgba(30,26,20,.09),0 2px 8px rgba(30,26,20,.05);
+  --sh3:0 16px 56px rgba(30,26,20,.12),0 4px 16px rgba(30,26,20,.06);
+  --r:20px;--rl:28px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.65;overflow-x:hidden;}
+
+nav{position:sticky;top:0;z-index:200;height:60px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(250,247,242,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--cream3);}
+.nav-logo{font-family:'Lora',serif;font-size:17px;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:28px;align-items:center;list-style:none;}
+.nav-links a{font-size:13.5px;font-weight:600;color:var(--ink2);text-decoration:none;transition:color .18s;}
+.nav-links a:hover{color:var(--rose);}
+.nav-cta{background:var(--ink) !important;color:var(--cream) !important;padding:8px 18px;border-radius:50px;font-size:13px !important;box-shadow:0 3px 10px rgba(30,26,20,.2);transition:all .2s !important;}
+.nav-cta:hover{background:#3a3020 !important;transform:translateY(-1px);}
+
+.hero{max-width:1000px;margin:0 auto;padding:64px 48px 56px;display:grid;grid-template-columns:1fr 290px;gap:52px;align-items:start;}
+.hero-who{display:flex;align-items:center;gap:14px;margin-bottom:22px;animation:fadeUp .5s ease both;}
+.hero-avi{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--rose-l),var(--cream3));border:2.5px solid var(--rose-m);display:flex;align-items:center;justify-content:center;font-family:'Lora',serif;font-size:18px;color:var(--rose);flex-shrink:0;}
+.hero-name{font-family:'Lora',serif;font-size:20px;color:var(--ink);line-height:1.1;}
+.hero-role{font-size:13px;color:var(--ink3);font-weight:500;margin-top:2px;display:flex;align-items:center;gap:7px;}
+.open-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;animation:ping 2.5s ease infinite;}
+@keyframes ping{0%,100%{box-shadow:0 0 0 0 rgba(74,144,128,.4);}60%{box-shadow:0 0 0 6px rgba(74,144,128,0);}}
+.hero-hl{font-family:'Lora',serif;font-size:48px;line-height:1.1;letter-spacing:-1.5px;color:var(--ink);margin-bottom:18px;animation:fadeUp .5s .07s ease both;}
+.hero-hl em{font-style:italic;color:var(--rose);}
+.hero-bio{font-size:15.5px;color:var(--ink2);line-height:1.75;max-width:480px;margin-bottom:28px;font-weight:400;animation:fadeUp .5s .14s ease both;}
+.hero-actions{display:flex;gap:11px;flex-wrap:wrap;animation:fadeUp .5s .21s ease both;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:all .22s;}
+.btn-dark{background:var(--ink);color:var(--cream);box-shadow:0 4px 14px rgba(30,26,20,.22);}
+.btn-dark:hover{background:#3a3020;transform:translateY(-2px);box-shadow:0 8px 24px rgba(30,26,20,.28);}
+.btn-outline{background:white;color:var(--ink2);border:1.5px solid var(--sand);}
+.btn-outline:hover{border-color:var(--ink3);transform:translateY(-2px);}
+
+.career-card{background:var(--white);border-radius:var(--rl);border:1px solid var(--cream3);box-shadow:var(--sh2);padding:24px;position:sticky;top:76px;animation:fadeUp .5s .18s ease both;}
+.cc-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--ink4);margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+.cc-label::before{content:'';width:16px;height:1.5px;background:var(--rose);display:inline-block;}
+.tl{position:relative;padding-left:22px;}
+.tl::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:1.5px;background:var(--cream3);}
+.tl-item{position:relative;margin-bottom:20px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-19px;top:5px;width:11px;height:11px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px var(--sand);}
+.tl-period{font-size:10.5px;font-weight:700;color:var(--ink4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:2px;}
+.tl-role{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:1px;}
+.tl-org{font-size:12.5px;color:var(--ink3);font-weight:500;}
+.tl-award{font-size:11.5px;color:var(--rose);font-weight:600;margin-top:4px;}
+.card-skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;padding-top:16px;border-top:1px solid var(--cream2);}
+.csk{padding:4px 11px;border-radius:50px;font-size:12px;font-weight:600;background:var(--cream2);color:var(--ink2);border:1px solid var(--cream3);}
+
+.skills-strip{border-top:1px solid var(--sand);border-bottom:1px solid var(--sand);padding:20px 48px;background:white;}
+.skills-inner{max-width:1000px;margin:0 auto;display:flex;align-items:flex-start;gap:20px;}
+.s-lbl{font-size:11px;font-weight:700;color:var(--ink4);text-transform:uppercase;letter-spacing:1.2px;white-space:nowrap;padding-top:7px;flex-shrink:0;}
+.sb-rows{display:flex;flex-direction:column;gap:8px;flex:1;}
+.sb-row{display:flex;gap:8px;flex-wrap:wrap;}
+.sb{padding:5px 14px;border-radius:50px;font-size:12.5px;font-weight:600;border:1.5px solid transparent;transition:transform .18s;cursor:default;white-space:nowrap;}
+.sb:hover{transform:translateY(-2px);}
+.sb-r{background:var(--rose-l);color:var(--rose);border-color:var(--rose-m);}
+.sb-t{background:var(--teal-l);color:var(--teal);border-color:var(--teal-m);}
+.sb-p{background:var(--plum-l);color:var(--plum);border-color:var(--plum-m);}
+.sb-a{background:var(--amber-l);color:var(--amber);border-color:var(--amber-m);}
+.sb-n{background:var(--cream2);color:var(--ink2);border-color:var(--sand);}
+.tl-courses{font-size:11.5px;color:var(--ink3);font-weight:500;margin-top:5px;line-height:1.55;}
+
+.sw{max-width:1000px;margin:0 auto;padding:72px 48px;}
+.eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--ink4);margin-bottom:10px;}
+.sh{font-family:'Lora',serif;font-size:36px;letter-spacing:-.8px;color:var(--ink);margin-bottom:40px;line-height:1.15;}
+
+.proj-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+.pc{background:var(--white);border-radius:var(--rl);border:1px solid var(--cream3);box-shadow:var(--sh1);cursor:pointer;transition:box-shadow .26s,transform .26s;overflow:hidden;}
+.pc:hover{box-shadow:var(--sh3);transform:translateY(-3px);}
+.pc-main{padding:24px 24px 20px;}
+.pc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px;}
+.pc-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.pc-badge{padding:5px 11px;border-radius:50px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0;text-align:right;line-height:1.5;}
+.pc-title{font-family:'Lora',serif;font-size:17px;color:var(--ink);line-height:1.3;margin-bottom:5px;font-weight:600;}
+.pc-sub{font-size:11.5px;color:var(--ink3);font-weight:600;margin-bottom:10px;}
+.pc-desc{font-size:13px;color:var(--ink2);line-height:1.65;margin-bottom:14px;}
+.pc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
+.pct{padding:3px 10px;border-radius:50px;font-size:11px;font-weight:600;}
+.pc-footer{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--cream2);}
+.pc-link{font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:5px;transition:gap .18s;}
+.pc-link:hover{gap:8px;}
+.pc-expand{margin-left:auto;background:var(--cream2);border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:700;color:var(--ink2);display:flex;align-items:center;gap:5px;padding:7px 13px;border-radius:50px;transition:background .18s,color .18s;white-space:nowrap;}
+.pc-expand:hover{background:var(--cream3);color:var(--ink);}
+.arr{transition:transform .26s;display:inline-block;}
+.pc-expand.open .arr{transform:rotate(180deg);}
+.pc-detail{display:none;padding:20px 24px 24px;border-top:1px solid var(--cream2);background:var(--cream);animation:fadeUp .22s ease;}
+.pc-detail.open{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
+.detail-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:16px;}
+.dc h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink3);margin-bottom:9px;}
+.dc ul{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.dc li{font-size:12.5px;color:var(--ink2);padding-left:14px;position:relative;line-height:1.5;}
+.dc li::before{content:'→';position:absolute;left:0;color:var(--rose);font-size:10px;top:3px;}
+.res-box{border-radius:14px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
+.res-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+.res-box h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;}
+.res-box p{font-size:12.5px;line-height:1.55;}
+
+.writing-wrap{background:white;border-top:1px solid var(--sand);border-bottom:1px solid var(--sand);}
+.writing-inner{max-width:1000px;margin:0 auto;padding:72px 48px;}
+.article-hero{background:var(--cream);border-radius:var(--rl);padding:36px 40px;margin-bottom:24px;position:relative;overflow:hidden;text-decoration:none;display:block;transition:transform .24s,box-shadow .24s;border:1px solid var(--cream3);box-shadow:var(--sh1);}
+.article-hero:hover{transform:translateY(-3px);box-shadow:var(--sh2);}
+.ah-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.ah-pub{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink4);}
+.ah-dot{width:3px;height:3px;border-radius:50%;background:var(--sand);}
+.ah-stats{display:flex;gap:28px;margin-bottom:20px;}
+.ah-stat-num{font-family:'Lora',serif;font-size:30px;color:var(--rose);display:block;}
+.ah-stat-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink4);}
+.ah-title{font-family:'Lora',serif;font-size:21px;color:var(--ink);line-height:1.3;margin-bottom:10px;font-weight:600;}
+.ah-sub{font-size:13.5px;color:var(--ink3);line-height:1.65;margin-bottom:20px;max-width:600px;}
+.ah-cta{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--rose);transition:gap .18s;}
+.article-hero:hover .ah-cta{gap:11px;}
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;}
+.bc{background:var(--cream);border-radius:var(--r);border:1px solid var(--cream3);padding:22px;text-decoration:none;display:block;transition:transform .22s,box-shadow .22s,border-color .22s;}
+.bc:hover{transform:translateY(-3px);box-shadow:var(--sh2);border-color:var(--rose-m);}
+.bc-chip{display:inline-block;padding:3px 11px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px;}
+.bc-title{font-family:'Lora',serif;font-size:16px;color:var(--ink);line-height:1.3;margin-bottom:8px;font-weight:600;}
+.bc-snip{font-size:13px;color:var(--ink3);line-height:1.6;margin-bottom:12px;}
+.bc-meta{font-size:11.5px;color:var(--ink4);font-weight:600;display:flex;align-items:center;gap:7px;}
+.bmd{width:3px;height:3px;border-radius:50%;background:var(--ink4);}
+
+.contact-box{background:var(--ink);border-radius:var(--rl);padding:56px;text-align:center;position:relative;overflow:hidden;}
+.contact-box::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,112,122,.15) 0%,transparent 70%);top:-150px;right:-80px;pointer-events:none;}
+.contact-box h2{font-family:'Lora',serif;font-size:36px;color:white;letter-spacing:-.4px;margin-bottom:12px;position:relative;z-index:1;}
+.contact-box p{color:rgba(255,255,255,.55);font-size:15px;margin-bottom:32px;position:relative;z-index:1;}
+.cbtns{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.cbtn{padding:12px 24px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;font-family:inherit;border:none;cursor:pointer;transition:all .22s;display:flex;align-items:center;gap:8px;}
+.cbtn-rose{background:var(--rose);color:white;box-shadow:0 4px 14px rgba(200,112,122,.4);}
+.cbtn-rose:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(200,112,122,.5);}
+.cbtn-ghost{background:rgba(255,255,255,.08);color:white;border:1.5px solid rgba(255,255,255,.18);}
+.cbtn-ghost:hover{background:rgba(255,255,255,.15);transform:translateY(-2px);}
+
+footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var(--cream3);display:flex;justify-content:space-between;color:var(--ink4);font-size:12.5px;font-weight:500;}
+
+.fab{position:fixed;bottom:28px;right:28px;z-index:1000;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--rose),#d98890);color:white;border:none;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(200,112,122,.45);transition:all .28s cubic-bezier(.34,1.56,.64,1);}
+.fab:hover{transform:scale(1.1);}
+.fab.open{background:var(--ink);}
+.cwin{position:fixed;bottom:96px;right:28px;z-index:999;width:360px;height:500px;background:var(--cream);border-radius:28px;box-shadow:var(--sh3),0 0 0 1px var(--sand);display:flex;flex-direction:column;transform:scale(.9) translateY(16px);opacity:0;pointer-events:none;transition:all .3s cubic-bezier(.34,1.56,.64,1);transform-origin:bottom right;overflow:hidden;}
+.cwin.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
+.cwin-head{padding:16px 18px;background:linear-gradient(135deg,var(--rose-l),var(--cream2));border-bottom:1px solid var(--rose-m);display:flex;align-items:center;gap:12px;}
+.cavi{width:38px;height:38px;border-radius:50%;background:white;border:2px solid var(--rose-m);display:flex;align-items:center;justify-content:center;font-family:'Lora',serif;font-size:13px;color:var(--rose);flex-shrink:0;}
+.cwin-head h4{font-size:14px;font-weight:700;color:var(--ink);}
+.cwin-head p{font-size:11.5px;color:var(--ink3);font-weight:500;display:flex;align-items:center;gap:5px;}
+.gdot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:ping 2.5s ease infinite;}
+.cmsgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth;}
+.cmsgs::-webkit-scrollbar{width:3px;}
+.cmsgs::-webkit-scrollbar-thumb{background:var(--sand);border-radius:3px;}
+.cm{display:flex;flex-direction:column;gap:3px;max-width:88%;}
+.cm.bot{align-self:flex-start;}.cm.usr{align-self:flex-end;}
+.cbubble{padding:10px 14px;border-radius:16px;font-size:13.5px;line-height:1.58;}
+.cm.bot .cbubble{background:white;color:var(--ink);border-radius:4px 16px 16px 16px;border:1px solid var(--cream3);box-shadow:0 2px 6px rgba(30,26,20,.05);}
+.cm.usr .cbubble{background:linear-gradient(135deg,var(--rose),#d98890);color:white;border-radius:16px 16px 4px 16px;}
+.cmt{font-size:10px;color:var(--ink4);font-weight:500;}
+.cm.usr .cmt{text-align:right;}
+.cchips{padding:0 14px 10px;display:flex;gap:7px;flex-wrap:wrap;}
+.cchip{background:var(--rose-l);color:var(--rose);border:1.5px solid var(--rose-m);padding:5px 13px;border-radius:50px;font-size:12px;font-weight:700;cursor:pointer;transition:all .18s;font-family:inherit;}
+.cchip:hover{background:var(--rose);color:white;transform:translateY(-1px);}
+.cbot{padding:11px 13px;border-top:1px solid var(--cream3);display:flex;gap:8px;align-items:flex-end;background:white;}
+.cin{flex:1;background:var(--cream);border:1.5px solid var(--sand);border-radius:14px;padding:9px 13px;font-size:13.5px;font-family:inherit;color:var(--ink);resize:none;outline:none;max-height:88px;line-height:1.5;transition:border-color .18s;}
+.cin:focus{border-color:var(--rose);}
+.cin::placeholder{color:var(--ink4);}
+.csend{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--rose),#d98890);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;box-shadow:0 3px 10px rgba(200,112,122,.35);transition:all .2s;}
+.csend:hover{transform:scale(1.1);}
+.typ{display:flex;gap:5px;align-items:center;padding:10px 14px;background:white;border:1px solid var(--cream3);border-radius:4px 16px 16px 16px;width:fit-content;}
+.td{width:7px;height:7px;border-radius:50%;background:var(--rose);opacity:.5;animation:tdot 1.3s ease infinite;}
+.td:nth-child(2){animation-delay:.18s;}.td:nth-child(3){animation-delay:.36s;}
+@keyframes tdot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-5px);opacity:1}}
+
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding:44px 24px;}.career-card{position:static;}.hero-hl{font-size:36px;}}
+@media(max-width:600px){nav{padding:0 20px;}.sw,.writing-inner{padding:52px 20px;}.skills-strip{padding:16px 20px;}.skills-inner{grid-template-columns:auto repeat(3,auto);}.blog-grid{grid-template-columns:1fr;}.detail-cols{grid-template-columns:1fr;}.contact-box{padding:36px 24px;}footer{flex-direction:column;gap:6px;text-align:center;padding:20px;}.cwin{width:calc(100vw - 40px);right:20px;}.career-card{display:none;}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="nav">
-      <div class="left">
-        <span class="badge">Data Science • ML • MLOps</span>
-      </div>
-      <div class="navlinks">
-        <a href="projects/">Projects</a>
-        <a href="https://medium.com/@iambeingferoz">Blog</a>
-        <a href="https://drive.google.com/drive/folders/1r66grJ7YAS4UBYX32mdgBNJfvxTGNN2G?usp=sharing">Resume</a>
-        <a href="https://github.com/ferozk0333">GitHub</a>
-        <a href="https://www.linkedin.com/in/ferozkhan2/">LinkedIn</a>
+
+<nav>
+  <a href="#" class="nav-logo">Feroz Khan</a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://www.linkedin.com/in/ferozkhan2/" target="_blank">LinkedIn</a></li>
+    <li><a href="https://drive.google.com/drive/folders/1r66grJ7YAS4UBYX32mdgBNJfvxTGNN2G" target="_blank" class="nav-cta">↓ Resume</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div>
+    <div class="hero-who">
+      <div class="hero-avi">FK</div>
+      <div>
+        <div class="hero-name">Feroz Khan</div>
+        <div class="hero-role"><span class="open-dot"></span>Graduate Data Scientist · IHME, Seattle</div>
       </div>
     </div>
-
-    <section class="hero">
-      <h1>Feroz Khan</h1>
-      <p class="sub">
-        Hello! I build practical end-to-end ML and data systems spanning analytics, experimentation, modeling, and deployment. I currently work as a Graduate Data Scientist at IHME in Seattle, focusing on population health research. Previously, I worked at Oracle Financial Services Software.
-      </p>
-
-      <div class="tags" style="margin-top:14px">
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">NumPy</span>
-        <span class="tag">Pandas</span>
-        <span class="tag">Scikit-learn</span>
-        <span class="tag">PyTorch</span>
-        <span class="tag">MLOps</span>
-        <span class="tag">AWS</span>
-        <span class="tag">LLMs</span>
-        <span class="tag">Data Structures & Algorithms</span>
-      </div>
-    </section>
-
-    <div class="grid">
-      <!-- Card 1 -->
-      <article class="card">
-        <h3>Fine-Tuning CNN Architectures Using Transfer Learning</h3>
-        <p class="meta">Baseline CNN → VGG16/ResNET fine-tuning → +4.5% accuracy (91% → 95.5%).</p>
-        <p>Fine-tuned pre-trained VGG16 & ResNet on Fashion MNIST using a custom PyTorch Dataset + ETL pipeline.<br/>
-          Frozen backbone, replaced classifier head, tuned with K-Fold + Optuna for generalization.</p>
-        <div class="tags">
-          <span class="tag">PyTorch</span>
-          <span class="tag">Transfer Learning</span>
-          <span class="tag">Optuna</span>
-          <span class="tag">Computer Vision</span>
-        </div>
-        <p style="margin:12px 0 0 0">
-          <a href="https://github.com/ferozk0333/Transfer-Learning-Fine-Tuning-Using-PyTorch">Code</a> ·
-          <a href="projects/#project-1">Documentation</a>
-        </p>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="card">
-        <h3>Sentiment Analysis for Healthcare Domain with NLP & MLOps</h3>
-        <p class="meta">Mental health text classification → 80% accuracy · 0.84 ROC-AUC · 12% F1 disparity reduction.</p>
-        <p>Built end-to-end NLP pipeline on ~15K patient text records using Naive Bayes and Logistic Regression.<br/>
-          Integrated MLflow experiment tracking and evaluation pipeline.</p>
-      <div class="tags">
-        <span class="tag">NLP</span>
-        <span class="tag">MLflow</span>
-        <span class="tag">Scikit-learn</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Responsible AI</span>
-      </div>
-        <p style="margin:12px 0 0 0">
-          <a href="https://github.com/ferozk0333/Mental-Health-Analytics-using-NLP">Code</a> ·
-          <a href="projects/#project-2">Documentation</a>
-        </p>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="card">
-        <h3>Agentic RAG with Hallucination Filtering & Self-Reflection</h3>
-        <p class="meta">Hallucination-prone RAG → Agentic retrieval + grading → +15% GPT-Judge accuracy · 20% redundancy reduction.</p>
-        <p>Built modular LangGraph-based RAG with MMR + multi-query retrieval.
-          Dockerized and deployed on AWS with CI/CD and FastAPI endpoint.</p>
-      <div class="tags">
-        <span class="tag">LangGraph</span>
-        <span class="tag">FAISS</span>
-        <span class="tag">Pydantic</span>
-        <span class="tag">CI/CD</span>
-        <span class="tag">Docker</span>
-      </div>
-        <p style="margin:12px 0 0 0">
-          <a href="https://github.com/ferozk0333/Agentic-RAG-with-Hallucination-Filtering-Self-Reflection">Code</a> ·
-          <a href="projects/#project-3">Documentation</a>
-        </p>
-      </article>
-
-      <!-- Card 4 -->
-      <article class="card">
-        <h3>Fine-Tuning LLM with Quantization & LoRA</h3>
-        <p class="meta">Generic support replies → Gemma-7B + LoRA (8-bit) → +14% relevance · 60% lower memory.</p>
-        <p>Fine-tuned Gemma-7B on 945K+ customer support tweets using PEFT LoRA adapters and 8-bit quantization. Built HF Trainer pipeline to train, checkpoint, and load adapters for GPU inference.</p>
-        <div class="tags">
-          <span class="tag">PEFT LoRA</span>
-          <span class="tag">Quantization</span>
-          <span class="tag">Transformers</span>
-          <span class="tag">bitsandbytes</span>
-          <span class="tag">LLMs</span>
-        </div>
-        <p style="margin:12px 0 0 0">
-          <a href="https://github.com/ferozk0333/Fine-Tuning-Gemma-with-LoRA-for-Customer-Support-Automation">Code</a> ·
-          <a href="projects/#project-4">Documentation</a>
-        </p>
-      </article>
-
-      <!-- Card 5 -->
-      <article class="card">
-        <h3>End-to-End Sales BI Pipeline & Dashboard</h3>
-        <p class="meta">Raw OLTP data → Star schema + automated ETL → 20% reduction in ad-hoc analysis.</p>
-        <p>
-          Designed scalable fact-dimension model and processed 150K transactional records using SQL, Power Query, and Airflow. Built Power BI dashboards with KPIs and decomposition trees for drill-down revenue analysis.
-        </p>
-        <div class="tags">
-          <span class="tag">MySQL</span>
-          <span class="tag">Airflow</span>
-          <span class="tag">Power BI</span>
-          <span class="tag">Star Schema</span>
-          <span class="tag">ETL</span>
-        </div>
-        <p style="margin:12px 0 0 0">
-          <a href="https://github.com/ferozk0333/Sales_Insight_Using_PowerBI_MySQL">Code</a> ·
-          <a href="projects/#project-5">Documentation</a>
-        </p>
-      </article>
-
-      <!-- Card 6 -->
-      <article class="card">
-        <h3>IMT 526: Building & Applying LLMs</h3>
-        <p class="meta">LLM fundamentals → 15+ lab assignments (N-grams → Transformers → RAG) → reusable PyTorch implementations.</p>
-        <p>A collection of Jupyter notebooks and assignments from the LLM course I took from Prof. Chirag Shah at the University of Washington. Topics included language modeling, tokenization, embeddings, RNN/LSTM, attention, fine-tuning, and evaluation.</p>
-        <p style="margin:12px 0 0 0">
-          <a href="https://github.com/ferozk0333/IMT526-Building-Applying-LLMs">Repository</a>
-        </p>
-      </article>
-
-      <!-- Card 7 -->
-      <article class="card">
-        <h3>End-to-End Regression with AWS CI/CD</h3>
-        <p class="meta">Overfit-prone regression → L1/L2 + feature selection + CI/CD deploy → MAE 3.8 · RMSE 5.1.</p>
-        <p>
-          Built modular training + inference pipeline (ingestion, transform, train) with regularization and tuning to improve generalization. Dockerized and deployed on AWS using ECR + EC2 with GitHub Actions CI/CD.
-        </p>
-        <p style="margin:12px 0 0 0">
-          <a href="https://github.com/ferozk0333/Machine_Learning_based_Test_Score_Predictor_with_AWS_CI-CD_Deployment">Code</a> ·
-          <a href="projects/#project-6">Documentation</a>
-        </p>
-      </article>
-
-      <!-- Card 8 -->
-      <article class="card">
-        <h3>Writing & Notes</h3>
-        <p class="meta">Technical deep dives on ML systems, Deployment, LLM safety, and production AI workflows.</p>
-        <p>Topics include L1/L2 and Batch Normalization, MLOps workflows, AI Agents, model evaluation and metrics, etc.</p>
-        <p style="margin:12px 0 0 0">
-          <a href="https://medium.com/@iambeingferoz">Visit Medium</a>
-        </p>
-      </article>
-    </div>
-
-    <hr />
-    <div class="footer">
-      © <span id="y"></span> Feroz Khan ·
-      <a href="mailto:ferozk0333@gmail.com">ferozk0333@gmail.com</a>
+    <h1 class="hero-hl">ML that ships<br>and <em>measures</em></h1>
+    <p class="hero-bio">I work as a Graduate Data Scientist at the Institute for Health Metrics and Evaluation, where I own forecasting pipelines that inform global health publications for the World Bank and Gates Foundation. My background spans LLMs, MLOps, and applied ML at Oracle before that. Donald &amp; Lynda Horowitz Merit Fellow at UW, $17,000 award for responsible AI innovation.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-dark">See the work ↓</a>
+      <a href="https://drive.google.com/drive/folders/1r66grJ7YAS4UBYX32mdgBNJfvxTGNN2G" target="_blank" class="btn btn-outline">📄 Resume</a>
     </div>
   </div>
+  <div class="career-card">
+    <div class="cc-label">Career</div>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--teal)"></div>
+        <div class="tl-period">Oct 2025 – Jun 2026</div>
+        <div class="tl-role">Graduate Data Scientist</div>
+        <div class="tl-org">Institute for Health Metrics and Evaluation</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--plum)"></div>
+        <div class="tl-period">Sep 2024 – Jun 2026</div>
+        <div class="tl-role">MS · University of Washington</div>
+        <div class="tl-org">Data Science &amp; ML</div>
+        <div class="tl-courses">Statistical ML · Building &amp; Applying LLMs · Deep Learning · AI Ethics</div>
+        <div class="tl-award">Donald &amp; Lynda Horowitz Merit Fellow · $17,000 · Responsible AI Innovation</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--amber)"></div>
+        <div class="tl-period">Jul 2022 – Jun 2023</div>
+        <div class="tl-role">Applied Data Scientist</div>
+        <div class="tl-org">Oracle Financial Services Software</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+<div class="skills-strip">
+  <div class="skills-inner">
+    <span class="s-lbl">Stack</span>
+    <div class="sb-rows">
+      <div class="sb-row">
+        <span class="sb sb-r">Python</span><span class="sb sb-t">PyTorch</span><span class="sb sb-p">HuggingFace</span><span class="sb sb-n">Scikit-learn</span><span class="sb sb-r">MLflow</span><span class="sb sb-n">SQL</span><span class="sb sb-t">LLM Fine-Tuning</span>
+      </div>
+      <div class="sb-row">
+        <span class="sb sb-a">AWS · SageMaker · EC2 · S3 · Lambda</span><span class="sb sb-p">LangGraph · ChromaDB · AI Agents</span><span class="sb sb-a">Docker · CI/CD</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS: 4x1 featured, then 2x1 row -->
+<div class="sw" id="projects">
+  <div class="eyebrow">Projects</div>
+  <h2 class="sh">Selected work</h2>
+  <div class="proj-grid">
+
+    <!-- 1 Agentic RAG -->
+    <div class="pc" onclick="togglePC(this)">
+      <div class="pc-main">
+        <h3 class="pc-title">Agentic RAG with Hallucination Filtering</h3>
+        <p class="pc-sub">LangGraph · FAISS · OpenAI · FastAPI · Docker · AWS</p>
+        <p class="pc-desc">Modular agentic RAG with MMR + multi-query retrieval, binary hallucination grading (LLM + NLI), and self-reflection. Deployed on AWS EC2 with CI/CD and FastAPI endpoints.</p>
+        <div class="pc-tags">
+          <span class="pct" style="background:var(--plum-l);color:var(--plum)">LangGraph</span>
+          <span class="pct" style="background:var(--teal-l);color:var(--teal)">FAISS</span>
+          <span class="pct" style="background:var(--amber-l);color:var(--amber)">Docker</span>
+          <span class="pct" style="background:var(--rose-l);color:var(--rose)">CI/CD</span>
+        </div>
+        <div class="pc-footer">
+          <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--plum)" onclick="e(event)">GitHub →</a>
+          <button class="pc-expand" onclick="tBtn(event,this)">Details <span class="arr">▾</span></button>
+        </div>
+      </div>
+      <div class="pc-detail">
+        <div class="detail-cols">
+          <div class="dc"><h4>Architecture</h4><ul>
+            <li>Query routing to FAISS vector DB or Tavily live web search</li>
+            <li>MMR + multi-query expansion for recall and diversity</li>
+            <li>LLM + NLI binary hallucination grading with adaptive self-reflection</li>
+            <li>LangGraph state machine for modular agent orchestration</li>
+          </ul></div>
+          <div class="dc"><h4>Deployment</h4><ul>
+            <li>Dockerized, deployed on AWS EC2</li>
+            <li>GitHub Actions CI/CD pipeline</li>
+            <li>FastAPI + Pydantic RESTful endpoints</li>
+            <li>5,000+ indexed documents + live search</li>
+          </ul></div>
+        </div>
+        <div class="res-box" style="background:var(--plum-l);border:1.5px solid var(--plum-m)">
+          <div><h4 style="color:var(--plum)">Result</h4><p style="color:var(--ink2)">+15% GPT-Judge factual accuracy vs baseline RAG. 20% retrieval redundancy reduction. 18% hallucination rate reduction in simulated evaluation.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 LLM LoRA -->
+    <div class="pc" onclick="togglePC(this)">
+      <div class="pc-main">
+        <h3 class="pc-title">Fine-Tuning LLM with LoRA &amp; Quantization</h3>
+        <p class="pc-sub">HuggingFace · PEFT · LoRA · bitsandbytes · Gemma-7B</p>
+        <p class="pc-desc">Fine-tuned Gemma-7B on 945K+ customer support tweets using LoRA (r=64) and 8-bit quantization. Full 7B fine-tune on a single GPU, eliminating multi-GPU infrastructure.</p>
+        <div class="pc-tags">
+          <span class="pct" style="background:var(--rose-l);color:var(--rose)">LoRA / PEFT</span>
+          <span class="pct" style="background:var(--amber-l);color:var(--amber)">Quantization</span>
+          <span class="pct" style="background:var(--plum-l);color:var(--plum)">Gemma-7B</span>
+          <span class="pct" style="background:var(--teal-l);color:var(--teal)">LLMs</span>
+        </div>
+        <div class="pc-footer">
+          <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--rose)" onclick="e(event)">GitHub →</a>
+          <button class="pc-expand" onclick="tBtn(event,this)">Details <span class="arr">▾</span></button>
+        </div>
+      </div>
+      <div class="pc-detail">
+        <div class="detail-cols">
+          <div class="dc"><h4>Pipeline</h4><ul>
+            <li>945K input/response tweet pairs, tokenized max_length=512</li>
+            <li>LoRA on q_proj/v_proj: r=16, alpha=32, dropout=0.1</li>
+            <li>8-bit loading via bitsandbytes for single-GPU training</li>
+            <li>AdamW + gradient accumulation; adapters checkpointed</li>
+          </ul></div>
+          <div class="dc"><h4>Key decisions</h4><ul>
+            <li>LoRA: fast iteration, tiny artifact vs full fine-tune</li>
+            <li>8-bit quantization: 60% memory reduction, no quality loss</li>
+            <li>Target q/v projections: best quality-cost tradeoff</li>
+            <li>300-sample blind test for unbiased evaluation</li>
+          </ul></div>
+        </div>
+        <div class="res-box" style="background:var(--rose-l);border:1.5px solid var(--rose-m)">
+          <div><h4 style="color:var(--rose)">Result</h4><p style="color:var(--ink2)">+14% response relevance vs base Gemma-7B. 62% win-rate in pairwise preference eval. 60% GPU memory reduction, enabling deployment on lower-cost infrastructure.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 SageMaker -->
+    <div class="pc" onclick="togglePC(this)">
+      <div class="pc-main">
+        <h3 class="pc-title">AWS SageMaker End-to-End ML Pipeline</h3>
+        <p class="pc-sub">AWS SageMaker · S3 · IAM · Random Forest · Spot Instances</p>
+        <p class="pc-desc">Fraud detection classifier on 50K rows and 30+ features. Ran 30+ hyperparameter experiments with built-in tracking. Spot instances cut training costs by 60%.</p>
+        <div class="pc-tags">
+          <span class="pct" style="background:var(--amber-l);color:var(--amber)">SageMaker</span>
+          <span class="pct" style="background:var(--teal-l);color:var(--teal)">Random Forest</span>
+          <span class="pct" style="background:var(--plum-l);color:var(--plum)">MLOps</span>
+          <span class="pct" style="background:var(--rose-l);color:var(--rose)">Fraud Detection</span>
+        </div>
+        <div class="pc-footer">
+          <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--amber)" onclick="e(event)">GitHub →</a>
+          <button class="pc-expand" onclick="tBtn(event,this)">Details <span class="arr">▾</span></button>
+        </div>
+      </div>
+      <div class="pc-detail">
+        <div class="detail-cols">
+          <div class="dc"><h4>Pipeline</h4><ul>
+            <li>50K rows, 30+ features on SageMaker with S3 + IAM</li>
+            <li>Random Forest vs Logistic Regression baseline</li>
+            <li>30+ hyperparameter experiments, automated logging</li>
+            <li>Spot instance training for 60% cost reduction</li>
+          </ul></div>
+          <div class="dc"><h4>Outcomes</h4><ul>
+            <li>Accuracy: 80% to 95%, +15 points over LR baseline</li>
+            <li>AUC-PR improved to 0.85</li>
+            <li>Full experiment tracking across all 30+ runs</li>
+            <li>Production-ready deployment pipeline</li>
+          </ul></div>
+        </div>
+        <div class="res-box" style="background:var(--amber-l);border:1.5px solid var(--amber-m)">
+          <div><h4 style="color:var(--amber)">Result</h4><p style="color:var(--ink2)">95% accuracy and AUC-PR 0.85. SageMaker Spot instances cut training costs 60% with automated tracking across 30+ experiment runs.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 CNN -->
+    <div class="pc" onclick="togglePC(this)">
+      <div class="pc-main">
+        <h3 class="pc-title">Fine-Tuning CNN with Transfer Learning</h3>
+        <p class="pc-sub">PyTorch · VGG16 · ResNet · Optuna · Fashion MNIST</p>
+        <p class="pc-desc">Fine-tuned VGG16 &amp; ResNet on Fashion MNIST. Frozen backbone, custom classifier head, Bayesian Optuna tuning for strong generalization on limited labeled data.</p>
+        <div class="pc-tags">
+          <span class="pct" style="background:var(--teal-l);color:var(--teal)">PyTorch</span>
+          <span class="pct" style="background:var(--rose-l);color:var(--rose)">Transfer Learning</span>
+          <span class="pct" style="background:var(--plum-l);color:var(--plum)">Optuna</span>
+          <span class="pct" style="background:var(--amber-l);color:var(--amber)">Computer Vision</span>
+        </div>
+        <div class="pc-footer">
+          <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--teal)" onclick="e(event)">GitHub →</a>
+          <a href="https://ferozk0333.github.io/projects/" target="_blank" class="pc-link" style="color:var(--ink3)" onclick="e(event)">Docs →</a>
+          <button class="pc-expand" onclick="tBtn(event,this)">Details <span class="arr">▾</span></button>
+        </div>
+      </div>
+      <div class="pc-detail">
+        <div class="detail-cols">
+          <div class="dc"><h4>Approach</h4><ul>
+            <li>28x28 grayscale to 3-channel RGB with transforms</li>
+            <li>Custom PyTorch Dataset + DataLoader ETL pipeline</li>
+            <li>VGG-16 &amp; ResNet: frozen backbone, custom head</li>
+            <li>CrossEntropy + Adam, K-Fold CV + Bayesian Optuna</li>
+          </ul></div>
+          <div class="dc"><h4>Why it worked</h4><ul>
+            <li>Transfer preserves ImageNet pretrained features</li>
+            <li>Weight decay tuning cut overfitting significantly</li>
+            <li>Bayesian search more efficient than grid search</li>
+            <li>Faster convergence vs training from scratch</li>
+          </ul></div>
+        </div>
+        <div class="res-box" style="background:var(--teal-l);border:1.5px solid var(--teal-m)">
+          <div><h4 style="color:var(--teal)">Result</h4><p style="color:var(--ink2)">+4.5% accuracy (91% to 95.5%). Reduced overfitting via weight decay. Faster convergence vs training from scratch on this domain-specific, limited dataset.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 2-column row for supporting projects -->
+  <div class="proj-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;">
+
+    <!-- 5 NLP Healthcare -->
+    <div class="pc" onclick="togglePC(this)">
+      <div class="pc-main">
+        <h3 class="pc-title">Sentiment Analysis for Healthcare with NLP &amp; MLOps</h3>
+        <p class="pc-sub">Python · Scikit-learn · MLflow · SQL · Responsible AI</p>
+        <p class="pc-desc">End-to-end NLP pipeline for mental health text classification on approx. 15K patient records. MLflow tracking + fairness-aware evaluation reducing F1 disparity across demographic subgroups.</p>
+        <div class="pc-tags">
+          <span class="pct" style="background:var(--green-l);color:var(--green)">NLP</span>
+          <span class="pct" style="background:var(--amber-l);color:var(--amber)">MLflow</span>
+          <span class="pct" style="background:var(--plum-l);color:var(--plum)">Responsible AI</span>
+          <span class="pct" style="background:var(--rose-l);color:var(--rose)">SQL</span>
+        </div>
+        <div class="pc-footer">
+          <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--green)" onclick="e(event)">GitHub →</a>
+          <a href="https://ferozk0333.github.io/projects/" target="_blank" class="pc-link" style="color:var(--ink3)" onclick="e(event)">Docs →</a>
+          <button class="pc-expand" onclick="tBtn(event,this)">Details <span class="arr">▾</span></button>
+        </div>
+      </div>
+      <div class="pc-detail">
+        <div class="detail-cols">
+          <div class="dc"><h4>Pipeline</h4><ul>
+            <li>Approx. 15K Govt. of India patient records + Kaggle sentiment data</li>
+            <li>TF-IDF preprocessing, strict train/val split (no leakage)</li>
+            <li>Naive Bayes baseline vs tuned Logistic Regression</li>
+            <li>Normalized SQL schema for predictions + PII metadata</li>
+          </ul></div>
+          <div class="dc"><h4>MLOps &amp; Fairness</h4><ul>
+            <li>MLflow tracking of hyperparams, metrics, artifacts</li>
+            <li>Class rebalancing + threshold calibration for equity</li>
+            <li>K-Fold tuning on L1/L2 regularization</li>
+            <li>12% F1 disparity reduction across demographic groups</li>
+          </ul></div>
+        </div>
+        <div class="res-box" style="background:var(--green-l);border:1.5px solid var(--green-m)">
+          <div><h4 style="color:var(--green)">Result</h4><p style="color:var(--ink2)">94.65% accuracy (up from 72% Naive Bayes baseline), 0.84 ROC-AUC, 12% F1 disparity reduction. 9% recall improvement for high-risk mental health categories.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 Sales BI -->
+    <div class="pc" onclick="togglePC(this)">
+      <div class="pc-main">
+        <h3 class="pc-title">End-to-End Sales BI Pipeline &amp; Dashboard</h3>
+        <p class="pc-sub">MySQL · Airflow · Power BI · Star Schema · ETL</p>
+        <p class="pc-desc">Scalable BI pipeline transforming 150K OLTP records into a star schema analytics layer. Power BI dashboards with KPIs, decomposition trees, and drill-down by region, product, and customer segment.</p>
+        <div class="pc-tags">
+          <span class="pct" style="background:var(--blue-l);color:var(--blue)">MySQL</span>
+          <span class="pct" style="background:var(--amber-l);color:var(--amber)">Airflow</span>
+          <span class="pct" style="background:var(--teal-l);color:var(--teal)">Power BI</span>
+          <span class="pct" style="background:var(--plum-l);color:var(--plum)">Star Schema</span>
+        </div>
+        <div class="pc-footer">
+          <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--blue)" onclick="e(event)">GitHub →</a>
+          <a href="https://ferozk0333.github.io/projects/" target="_blank" class="pc-link" style="color:var(--ink3)" onclick="e(event)">Docs →</a>
+          <button class="pc-expand" onclick="tBtn(event,this)">Details <span class="arr">▾</span></button>
+        </div>
+      </div>
+      <div class="pc-detail">
+        <div class="detail-cols">
+          <div class="dc"><h4>Pipeline</h4><ul>
+            <li>Star schema: fact table + 4 dimension tables</li>
+            <li>ETL: 150K records cleaned via SQL + Power Query</li>
+            <li>Airflow for automated scheduling and orchestration</li>
+            <li>Direct MySQL connection for near real-time access</li>
+          </ul></div>
+          <div class="dc"><h4>Analytics</h4><ul>
+            <li>KPI dashboards: revenue, quantity, top customers/products</li>
+            <li>Decomposition Trees for order profit driver analysis</li>
+            <li>Drill-down by region, product category, customer segment</li>
+            <li>Approx. 20% reduction in manual reporting and ad-hoc analysis</li>
+          </ul></div>
+        </div>
+        <div class="res-box" style="background:var(--blue-l);border:1.5px solid var(--blue-m)">
+          <div><h4 style="color:var(--blue)">Result</h4><p style="color:var(--ink2)">20% reduction in manual reporting time. Stakeholders gained real-time visibility into regional revenue, product contribution, and customer segment performance.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- WRITING -->
+<div class="writing-wrap" id="writing">
+  <div class="writing-inner">
+    <div class="eyebrow">Writing</div>
+    <h2 class="sh">Explainers &amp; technical deep-dives</h2>
+    <a href="https://ferozk0333.github.io/memory-wall/" target="_blank" class="article-hero">
+      <div class="ah-meta">
+        <span class="ah-pub">Data Science Collective · May 2026</span>
+        <span class="ah-dot"></span>
+        <span style="font-size:11px;font-weight:600;color:var(--ink4)">13 min · 5 interactive sections</span>
+      </div>
+      <div class="ah-stats">
+        <div><span class="ah-stat-num">200x</span><span class="ah-stat-lbl">Theory vs reality gap</span></div>
+        <div><span class="ah-stat-num">62K</span><span class="ah-stat-lbl">Theoretical tok/s (H100)</span></div>
+        <div><span class="ah-stat-num">approx. 200</span><span class="ah-stat-lbl">Actual tok/s in prod</span></div>
+      </div>
+      <div class="ah-title">The Memory Wall Is Strangling Your LLM: Why GPUs Are Faster Than We Think and Slower Than We Need</div>
+      <div class="ah-sub">A structural analysis of the 200x gap between theoretical and realized LLM throughput, with interactive demos of KV cache tradeoffs, speculative decoding, diffusion LLMs, and the roofline model.</div>
+      <span class="ah-cta">Read the interactive explainer →</span>
+    </a>
+    <div class="blog-grid">
+      <a href="https://medium.com/@iambeingferoz/designing-a-production-ready-mlops-workflow-from-mlflow-to-ci-cd-b8a2b34571fa" target="_blank" class="bc">
+        <span class="bc-chip" style="background:var(--amber-l);color:var(--amber)">MLOps</span>
+        <h3 class="bc-title">Designing a Production-Ready MLOps Workflow: From MLflow to CI/CD</h3>
+        <p class="bc-snip">An end-to-end walkthrough of training automation, model versioning, Docker, AWS deployment, and CI/CD for ML systems.</p>
+        <div class="bc-meta"><span>Feb 2026</span><span class="bmd"></span><span>MLflow · Docker · AWS</span></div>
+        <div style="margin-top:14px;font-size:13px;font-weight:700;color:var(--rose);">Read on Medium →</div>
+      </a>
+      <a href="https://medium.com/@iambeingferoz/persistence-in-langgraph-building-ai-agents-with-memory-fault-tolerance-and-human-in-the-loop-d07977980931" target="_blank" class="bc">
+        <span class="bc-chip" style="background:var(--plum-l);color:var(--plum)">LLM Agents</span>
+        <h3 class="bc-title">Persistence in LangGraph: Building AI Agents with Memory, Fault Tolerance, and Human-in-the-Loop</h3>
+        <p class="bc-snip">Agentic AI workflows use persistence to recover from failures, storing state so tasks resume reliably instead of restarting.</p>
+        <div class="bc-meta"><span>Aug 2025</span><span class="bmd"></span><span>LangGraph · AI Agents</span></div>
+        <div style="margin-top:14px;font-size:13px;font-weight:700;color:var(--rose);">Read on Medium →</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="sw" id="contact" style="padding-top:64px;">
+  <div class="contact-box">
+    <h2>Let's talk</h2>
+    <p>Open to full-time AI Engineering, Data Science, and MLOps roles.</p>
+    <div class="cbtns">
+      <a href="mailto:ferozk0333@gmail.com" class="cbtn cbtn-rose">✉ Email Feroz</a>
+      <a href="https://www.linkedin.com/in/ferozkhan2/" target="_blank" class="cbtn cbtn-ghost">LinkedIn</a>
+      <a href="https://github.com/ferozk0333" target="_blank" class="cbtn cbtn-ghost">GitHub</a>
+      <a href="https://medium.com/@iambeingferoz" target="_blank" class="cbtn cbtn-ghost">Medium</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 Feroz Khan · ferozk0333@gmail.com</span>
+  <span>ferozk0333.github.io</span>
+</footer>
+
+<button class="fab" id="fab" onclick="toggleChat()">💬</button>
+<div class="cwin" id="cwin">
+  <div class="cwin-head">
+    <div class="cavi">FK</div>
+    <div>
+      <h4>Ask Feroz's AI</h4>
+      <p><span class="gdot"></span> Resume, projects &amp; background</p>
+    </div>
+  </div>
+  <div class="cmsgs" id="cmsgs">
+    <div class="cm bot">
+      <div class="cbubble">Hi! I know Feroz's full background: projects, skills, experience, and availability. Ask me anything!</div>
+      <span class="cmt">Just now</span>
+    </div>
+  </div>
+  <div class="cchips" id="cchips">
+    <button class="cchip" onclick="chip(this)">Open to work?</button>
+    <button class="cchip" onclick="chip(this)">Strongest skills?</button>
+    <button class="cchip" onclick="chip(this)">Tell me about IHME</button>
+  </div>
+  <div class="cbot">
+    <textarea class="cin" id="cin" rows="1" placeholder="Ask anything about Feroz…" onkeydown="ck(event)" oninput="gr(this)"></textarea>
+    <button class="csend" onclick="cs()">↑</button>
+  </div>
+</div>
+
+<script>
+function e(ev){ev.stopPropagation();}
+function togglePC(card){
+  const d=card.querySelector('.pc-detail'),b=card.querySelector('.pc-expand');
+  const was=d.classList.contains('open');
+  document.querySelectorAll('.pc-detail').forEach(x=>x.classList.remove('open'));
+  document.querySelectorAll('.pc-expand').forEach(x=>x.classList.remove('open'));
+  if(!was){d.classList.add('open');b.classList.add('open');card.scrollIntoView({behavior:'smooth',block:'nearest'});}
+}
+function tBtn(ev,btn){ev.stopPropagation();togglePC(btn.closest('.pc'));}
+let co=false;
+function toggleChat(){co=!co;document.getElementById('cwin').classList.toggle('open',co);document.getElementById('fab').classList.toggle('open',co);document.getElementById('fab').textContent=co?'✕':'💬';}
+function ck(ev){if(ev.key==='Enter'&&!ev.shiftKey){ev.preventDefault();cs();}}
+function gr(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,88)+'px';}
+const WORKER_URL = 'https://feroz-portfolio-proxy.ferozk0333.workers.dev';
+
+function chip(btn){
+  document.getElementById('cchips').style.display='none';
+  addM('usr',btn.textContent);
+  askWorker(btn.textContent);
+}
+function cs(){
+  const el=document.getElementById('cin'),t=el.value.trim();
+  if(!t)return;
+  document.getElementById('cchips').style.display='none';
+  el.value='';el.style.height='auto';
+  addM('usr',t);
+  askWorker(t);
+}
+async function askWorker(message){
+  showT();
+  try {
+    const res = await fetch(WORKER_URL, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({message})
+    });
+    const data = await res.json();
+    remT();
+    addM('bot', data.reply || "Sorry, I couldn't get a response. Try emailing ferozk0333@gmail.com directly.");
+  } catch(err) {
+    remT();
+    addM('bot',"Connection issue — please try again or reach Feroz at ferozk0333@gmail.com.");
+  }
+}
+function addM(r,txt){const c=document.getElementById('cmsgs'),d=document.createElement('div');d.className=`cm ${r}`;d.innerHTML=`<div class="cbubble">${txt}</div><span class="cmt">Just now</span>`;c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function showT(){const c=document.getElementById('cmsgs'),d=document.createElement('div');d.className='cm bot';d.id='typ';d.innerHTML='<div class="typ"><span class="td"></span><span class="td"></span><span class="td"></span></div>';c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function remT(){const t=document.getElementById('typ');if(t)t.remove();}
+</script>
 </body>
 </html>
