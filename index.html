@@ -632,7 +632,24 @@ async function askWorker(message){
     addM('bot',"Connection issue — please try again or reach Feroz at ferozk0333@gmail.com.");
   }
 }
-function addM(r,txt){const c=document.getElementById('cmsgs'),d=document.createElement('div');d.className=`cm ${r}`;d.innerHTML=`<div class="cbubble">${txt}</div><span class="cmt">Just now</span>`;c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function addM(r, txt) {
+  const c = document.getElementById('cmsgs'), d = document.createElement('div');
+  d.className = `cm ${r}`;
+  
+  // 1. Convert standard line breaks to HTML break tags
+  let formattedTxt = txt.replace(/\n/g, '<br>');
+  
+  // 2. Regex to find URLs and convert them into clickable hyperlinks
+  const urlRegex = /(https?:\/\/[^\s<]+)/g;
+  formattedTxt = formattedTxt.replace(urlRegex, function(url) {
+    return `<a href="${url}" target="_blank" style="color: var(--rose); font-weight: 600; text-decoration: underline; word-break: break-all;">${url}</a>`;
+  });
+
+  d.innerHTML = `<div class="cbubble">${formattedTxt}</div><span class="cmt">Just now</span>`;
+  c.appendChild(d);
+  c.scrollTop = c.scrollHeight;
+}  
+#function addM(r,txt){const c=document.getElementById('cmsgs'),d=document.createElement('div');d.className=`cm ${r}`;d.innerHTML=`<div class="cbubble">${txt}</div><span class="cmt">Just now</span>`;c.appendChild(d);c.scrollTop=c.scrollHeight;}
 function showT(){const c=document.getElementById('cmsgs'),d=document.createElement('div');d.className='cm bot';d.id='typ';d.innerHTML='<div class="typ"><span class="td"></span><span class="td"></span><span class="td"></span></div>';c.appendChild(d);c.scrollTop=c.scrollHeight;}
 function remT(){const t=document.getElementById('typ');if(t)t.remove();}
 </script>
