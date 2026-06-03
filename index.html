@@ -639,7 +639,10 @@ function addM(r, txt) {
   // 1. Convert standard line breaks to HTML break tags
   let formattedTxt = txt.replace(/\n/g, '<br>');
   
-  // 2. Regex to find URLs and convert them into clickable hyperlinks
+  // 2. Parse Markdown bold (**text**) into HTML strong tags
+  formattedTxt = formattedTxt.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  
+  // 3. Regex to find URLs and convert them into clickable hyperlinks
   const urlRegex = /(https?:\/\/[^\s<]+)/g;
   formattedTxt = formattedTxt.replace(urlRegex, function(url) {
     return `<a href="${url}" target="_blank" style="color: var(--rose); font-weight: 600; text-decoration: underline; word-break: break-all;">${url}</a>`;
@@ -648,7 +651,7 @@ function addM(r, txt) {
   d.innerHTML = `<div class="cbubble">${formattedTxt}</div><span class="cmt">Just now</span>`;
   c.appendChild(d);
   c.scrollTop = c.scrollHeight;
-}  
+}
 
 function showT(){const c=document.getElementById('cmsgs'),d=document.createElement('div');d.className='cm bot';d.id='typ';d.innerHTML='<div class="typ"><span class="td"></span><span class="td"></span><span class="td"></span></div>';c.appendChild(d);c.scrollTop=c.scrollHeight;}
 function remT(){const t=document.getElementById('typ');if(t)t.remove();}
