@@ -208,8 +208,89 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
 .td:nth-child(2){animation-delay:.18s;}.td:nth-child(3){animation-delay:.36s;}
 @keyframes tdot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-5px);opacity:1}}
 
-@media(max-width:900px){.hero{grid-template-columns:1fr;padding:44px 24px;}.career-card{position:static;}.hero-hl{font-size:36px;}.article-hero-split{grid-template-columns:1fr;}}
-@media(max-width:600px){nav{padding:0 20px;}.sw,.writing-inner{padding:52px 20px;}.skills-strip{padding:16px 20px;}.skills-inner{grid-template-columns:auto repeat(3,auto);}.blog-grid{grid-template-columns:1fr;}.detail-cols{grid-template-columns:1fr;}.contact-box{padding:36px 24px;}footer{flex-direction:column;gap:6px;text-align:center;padding:20px;}.cwin{width:calc(100vw - 40px);right:20px;}.career-card{display:none;}}
+/* ── Hamburger nav ── */
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--ink);flex-shrink:0;}
+.nav-hamburger svg{display:block;}
+.nav-mobile-menu{display:none;position:fixed;inset:60px 0 0 0;background:rgba(250,247,242,.97);backdrop-filter:blur(20px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.nav-mobile-menu.open{display:flex;}
+.nav-mobile-menu a{font-size:22px;font-weight:700;color:var(--ink2);text-decoration:none;transition:color .18s;}
+.nav-mobile-menu a:hover{color:var(--rose);}
+.nav-mobile-menu .nav-cta{background:var(--ink) !important;color:var(--cream) !important;padding:12px 28px;border-radius:50px;font-size:16px !important;}
+
+/* ── 900px tablet ── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding:44px 32px;}
+  .career-card{position:static;}
+  .hero-hl{font-size:38px;}
+  .article-hero-split{grid-template-columns:1fr;overflow:hidden;}
+  .ahs-left,.ahs-right{min-width:0;width:100%;}
+  .embed-widget{overflow:hidden;width:100%;}
+}
+
+/* ── 600px mobile ── */
+@media(max-width:600px){
+  /* Nav */
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;align-items:center;justify-content:center;}
+
+  /* Hero */
+  .hero{padding:36px 20px 40px;gap:32px;}
+  .hero-hl{font-size:32px;letter-spacing:-1px;}
+  .hero-bio{font-size:14.5px;}
+  .hero-actions{gap:10px;}
+  .hero-actions .btn{padding:11px 20px;font-size:13.5px;}
+  .career-card{display:none;}
+
+  /* Skills */
+  .skills-strip{border-left:none;border-right:none;}
+  .skills-inner{padding:18px 20px;flex-direction:column;gap:10px;}
+  .s-lbl{padding-top:0;}
+  .sb-rows{gap:8px;}
+  .sb-row{gap:6px;}
+  .sb{font-size:12px;padding:5px 12px;white-space:normal;text-align:center;}
+
+  /* Projects */
+  .sw{padding:48px 20px;}
+  .sh{font-size:28px;margin-bottom:28px;}
+  .proj-grid{gap:14px;}
+  .proj-grid-2{grid-template-columns:1fr !important;gap:14px !important;}
+  .pc-main{padding:20px 18px 16px;}
+  .pc-title{font-size:16px;}
+  .pc-tags{gap:5px;}
+  .pct{font-size:10.5px;padding:3px 9px;}
+  .pc-footer{flex-wrap:wrap;gap:10px;}
+  .detail-cols{grid-template-columns:1fr;}
+  .pc-detail{padding:16px 18px 20px;}
+  .contact-box{padding:36px 20px;}
+  .contact-box h2{font-size:28px;}
+  .cbtns{flex-direction:column;align-items:stretch;}
+  .cbtn{justify-content:center;}
+
+  /* Writing */
+  .writing-inner{padding:48px 20px;}
+  .article-hero-split{padding:20px 16px;gap:20px;overflow:hidden;}
+  .ahs-left{min-width:0;overflow:hidden;}
+  .ahs-left .ah-title{font-size:17px;word-break:break-word;}
+  .ahs-left .ah-sub{font-size:13px;overflow-wrap:break-word;word-break:break-word;}
+  .ah-stats{gap:16px;}
+  .ah-stat-num{font-size:22px;}
+  .ahs-right{min-width:0;width:100%;overflow:hidden;}
+  .embed-widget{width:100%;overflow:hidden;box-sizing:border-box;}
+  .embed-widget canvas{max-width:100% !important;width:100% !important;}
+  .embed-controls{flex-wrap:wrap;gap:6px;}
+  .blog-grid{grid-template-columns:1fr;gap:14px;}
+  .bc{padding:18px;}
+
+  /* Footer */
+  footer{flex-direction:column;gap:6px;text-align:center;padding:20px;}
+
+  /* Chat */
+  .fab{bottom:20px;right:16px;width:50px;height:50px;font-size:20px;}
+  .cwin{width:calc(100vw - 24px);right:12px;bottom:82px;height:min(500px, calc(100dvh - 120px));border-radius:20px;}
+  .cbubble{font-size:13px;}
+  .cin{font-size:13px;}
+}
 </style>
 </head>
 <body>
@@ -223,7 +304,21 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
     <li><a href="https://www.linkedin.com/in/ferozkhan2/" target="_blank">LinkedIn</a></li>
     <li><a href="https://drive.google.com/drive/folders/1r66grJ7YAS4UBYX32mdgBNJfvxTGNN2G" target="_blank" class="nav-cta">↓ Resume</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line id="hb-top" x1="3" y1="6" x2="21" y2="6"/>
+      <line id="hb-mid" x1="3" y1="12" x2="21" y2="12"/>
+      <line id="hb-bot" x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
 </nav>
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#writing" onclick="closeMobileMenu()">Writing</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="https://www.linkedin.com/in/ferozkhan2/" target="_blank" onclick="closeMobileMenu()">LinkedIn</a>
+  <a href="https://drive.google.com/drive/folders/1r66grJ7YAS4UBYX32mdgBNJfvxTGNN2G" target="_blank" class="nav-cta" onclick="closeMobileMenu()">↓ Resume</a>
+</div>
 
 <div class="hero">
   <div>
@@ -714,7 +809,7 @@ const C = {
 function setupCanvas(id, h) {
   const el = document.getElementById(id);
   if (!el) return [null,0,0];
-  const W = el.parentElement.clientWidth || el.parentElement.parentElement.clientWidth || 400;
+  const W = Math.min(el.parentElement.clientWidth || el.parentElement.parentElement.clientWidth || 400, el.parentElement.offsetWidth || 9999);
   el.width = W * DPR; el.height = h * DPR;
   el.style.width = W + 'px'; el.style.height = h + 'px';
   const ctx = el.getContext('2d'); ctx.scale(DPR, DPR);
@@ -842,6 +937,34 @@ function animDecode(){
 
 window.addEventListener('load',()=>{ drawDecodeFrame(0); });
 window.addEventListener('resize',()=>{ drawDecodeFrame(decProg); });
+
+// Mobile nav
+let mobileOpen = false;
+function toggleMobileMenu(){
+  mobileOpen = !mobileOpen;
+  document.getElementById('nav-mobile-menu').classList.toggle('open', mobileOpen);
+  // Animate hamburger to X
+  const top = document.getElementById('hb-top');
+  const mid = document.getElementById('hb-mid');
+  const bot = document.getElementById('hb-bot');
+  if(mobileOpen){
+    top.setAttribute('x1','5'); top.setAttribute('y1','5'); top.setAttribute('x2','19'); top.setAttribute('y2','19');
+    mid.style.opacity='0';
+    bot.setAttribute('x1','19'); bot.setAttribute('y1','5'); bot.setAttribute('x2','5'); bot.setAttribute('y2','19');
+  } else {
+    top.setAttribute('x1','3'); top.setAttribute('y1','6'); top.setAttribute('x2','21'); top.setAttribute('y2','6');
+    mid.style.opacity='1';
+    bot.setAttribute('x1','3'); bot.setAttribute('y1','18'); bot.setAttribute('x2','21'); bot.setAttribute('y2','18');
+  }
+}
+function closeMobileMenu(){
+  mobileOpen = false;
+  document.getElementById('nav-mobile-menu').classList.remove('open');
+  const top=document.getElementById('hb-top'),mid=document.getElementById('hb-mid'),bot=document.getElementById('hb-bot');
+  top.setAttribute('x1','3');top.setAttribute('y1','6');top.setAttribute('x2','21');top.setAttribute('y2','6');
+  mid.style.opacity='1';
+  bot.setAttribute('x1','3');bot.setAttribute('y1','18');bot.setAttribute('x2','21');bot.setAttribute('y2','18');
+}
 </script>
 </body>
 </html>
