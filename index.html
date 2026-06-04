@@ -725,7 +725,7 @@ function txt(ctx,t,x,y,col,size,align='left',weight=''){ctx.fillStyle=col;ctx.fo
 function ease(t){return t<.5?2*t*t:-1+(4-2*t)*t;}
 
 let decRunning=false,decToks=[],decCount=0,decRAF,decStart=null,decProg=0;
-const DEC_N=20;
+const DEC_N=10;
 
 function toggleDecode(){
   if(decCount>=DEC_N) return;
