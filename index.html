@@ -49,16 +49,16 @@ nav{position:sticky;top:0;z-index:200;height:60px;padding:0 48px;display:flex;al
 .btn-outline{background:white;color:var(--ink2);border:1.5px solid var(--sand);}
 .btn-outline:hover{border-color:var(--ink3);transform:translateY(-2px);}
 
-.career-card{background:var(--white);border-radius:var(--rl);border:1px solid var(--cream3);box-shadow:var(--sh2);padding:24px;position:sticky;top:76px;animation:fadeUp .5s .18s ease both;}
-.cc-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--ink4);margin-bottom:18px;}
+.career-card{background:var(--white);border-radius:var(--rl);border:1px solid var(--cream3);box-shadow:var(--sh2);padding:28px 28px 26px;position:sticky;top:76px;animation:fadeUp .5s .18s ease both;}
+.cc-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--ink4);margin-bottom:20px;}
 
 .tl{position:relative;padding-left:22px;}
 .tl::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:1.5px;background:var(--cream3);}
-.tl-item{position:relative;margin-bottom:20px;}
+.tl-item{position:relative;margin-bottom:22px;}
 .tl-item:last-child{margin-bottom:0;}
 .tl-dot{position:absolute;left:-19px;top:5px;width:11px;height:11px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px var(--sand);}
-.tl-period{font-size:10.5px;font-weight:700;color:var(--ink4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:2px;}
-.tl-role{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:1px;}
+.tl-period{font-size:10.5px;font-weight:700;color:var(--ink4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px;}
+.tl-role{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:2px;}
 .tl-org{font-size:12.5px;color:var(--ink3);font-weight:500;}
 .tl-award{font-size:11.5px;color:var(--rose);font-weight:600;margin-top:4px;}
 .card-skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;padding-top:16px;border-top:1px solid var(--cream2);}
@@ -116,6 +116,30 @@ nav{position:sticky;top:0;z-index:200;height:60px;padding:0 48px;display:flex;al
 
 .writing-wrap{background:white;border-top:1px solid var(--sand);border-bottom:1px solid var(--sand);}
 .writing-inner{max-width:1000px;margin:0 auto;padding:72px 48px;}
+
+/* Two-column featured article */
+.article-hero-split{background:var(--cream);border-radius:var(--rl);padding:32px 36px;margin-bottom:24px;border:1px solid var(--cream3);box-shadow:var(--sh1);display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;}
+.ahs-left{display:flex;flex-direction:column;gap:0;}
+.ahs-left .ah-stats{margin-bottom:14px;}
+.ahs-left .ah-title{font-family:'Lora',serif;font-size:19px;color:var(--ink);line-height:1.3;margin-bottom:10px;font-weight:600;}
+.ahs-left .ah-sub{font-size:13.5px;color:var(--ink3);line-height:1.65;margin-bottom:16px;}
+.ah-cta-link{transition:gap .18s;}
+.ah-cta-link:hover{gap:11px !important;}
+
+/* Embedded widget in writing section */
+.ahs-right{}
+.embed-widget{background:var(--white);border-radius:16px;border:1px solid var(--cream3);box-shadow:var(--sh1);overflow:hidden;}
+.embed-header{padding:10px 14px 8px;border-bottom:1px solid var(--cream2);display:flex;flex-direction:column;gap:2px;}
+.embed-pill{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);font-family:'DM Sans',sans-serif;}
+.embed-label{font-size:12px;color:var(--ink2);font-weight:500;}
+.embed-controls{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--cream2);border-top:1px solid var(--cream3);flex-wrap:wrap;}
+.ewbtn{font-family:'DM Sans',sans-serif;font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:50px;background:var(--ink);color:var(--cream);border:none;cursor:pointer;transition:all .18s;}
+.ewbtn:hover{background:#3a3020;transform:translateY(-1px);}
+.ewbtn.ewbtn-sec{background:var(--cream3);color:var(--ink2);border:1.5px solid var(--sand);}
+.ewbtn.ewbtn-sec:hover{background:var(--sand);color:var(--ink);}
+.embed-spill{font-size:10px;font-weight:700;padding:3px 9px;border-radius:50px;background:var(--cream3);color:var(--ink4);text-transform:uppercase;letter-spacing:.05em;}
+.embed-spill.run{background:rgba(74,144,128,.12);color:var(--teal);border:1px solid rgba(74,144,128,.25);}
+
 .article-hero{background:var(--cream);border-radius:var(--rl);padding:36px 40px;margin-bottom:24px;position:relative;overflow:hidden;text-decoration:none;display:block;transition:transform .24s,box-shadow .24s;border:1px solid var(--cream3);box-shadow:var(--sh1);}
 .article-hero:hover{transform:translateY(-3px);box-shadow:var(--sh2);}
 .ah-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
@@ -184,7 +208,7 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
 .td:nth-child(2){animation-delay:.18s;}.td:nth-child(3){animation-delay:.36s;}
 @keyframes tdot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-5px);opacity:1}}
 
-@media(max-width:900px){.hero{grid-template-columns:1fr;padding:44px 24px;}.career-card{position:static;}.hero-hl{font-size:36px;}}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding:44px 24px;}.career-card{position:static;}.hero-hl{font-size:36px;}.article-hero-split{grid-template-columns:1fr;}}
 @media(max-width:600px){nav{padding:0 20px;}.sw,.writing-inner{padding:52px 20px;}.skills-strip{padding:16px 20px;}.skills-inner{grid-template-columns:auto repeat(3,auto);}.blog-grid{grid-template-columns:1fr;}.detail-cols{grid-template-columns:1fr;}.contact-box{padding:36px 24px;}footer{flex-direction:column;gap:6px;text-align:center;padding:20px;}.cwin{width:calc(100vw - 40px);right:20px;}.career-card{display:none;}}
 </style>
 </head>
@@ -508,21 +532,40 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
   <div class="writing-inner">
     <div class="eyebrow">Writing</div>
     <h2 class="sh">Explainers &amp; technical deep-dives</h2>
-    <a href="https://ferozk0333.github.io/memory-wall/" target="_blank" class="article-hero">
-      <div class="ah-meta">
-        <span class="ah-pub">Data Science Collective · May 2026</span>
-        <span class="ah-dot"></span>
-        <span style="font-size:11px;font-weight:600;color:var(--ink4)">13 min · 5 interactive sections</span>
+
+    <div class="article-hero-split">
+      <div class="ahs-left">
+        <div class="ah-meta">
+          <span class="ah-pub">Data Science Collective · May 2026</span>
+          <span class="ah-dot"></span>
+          <span style="font-size:11px;font-weight:600;color:var(--ink4)">13 min · 5 interactive sections</span>
+        </div>
+        <div class="ah-stats">
+          <div><span class="ah-stat-num">62,000</span><span class="ah-stat-lbl">Theoretical tok/s (H100)</span></div>
+          <div><span class="ah-stat-num">200</span><span class="ah-stat-lbl">Actual tok/s in prod</span></div>
+        </div>
+        <div class="ah-title" style="font-size:19px;">The Memory Wall Is Strangling Your LLM</div>
+        <div class="ah-sub">A structural analysis of the 200x gap between theoretical and realized LLM throughput, with interactive demos of KV cache tradeoffs, speculative decoding, diffusion LLMs, and the roofline model.</div>
+        <a href="https://ferozk0333.github.io/memory-wall/" target="_blank" style="display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--rose);text-decoration:none;margin-top:auto;" class="ah-cta-link">Read the interactive explainer →</a>
       </div>
-      <div class="ah-stats">
-        
-        <div><span class="ah-stat-num">62,000</span><span class="ah-stat-lbl">Theoretical tok/s (H100)</span></div>
-        <div><span class="ah-stat-num">200</span><span class="ah-stat-lbl">Actual tok/s in prod</span></div>
+      <div class="ahs-right">
+        <div class="embed-widget">
+          <div class="embed-header">
+            <span class="embed-pill">Interactive · Section 2</span>
+            <span class="embed-label">AR decoding: one 16 GB weight sweep per token</span>
+          </div>
+          <canvas id="c-decode" style="display:block;width:100%;"></canvas>
+          <div class="embed-controls">
+            <button class="ewbtn" id="btn-decode" onclick="toggleDecode()">▶ Generate</button>
+            <button class="ewbtn ewbtn-sec" onclick="resetDecode()">Reset</button>
+            <span style="flex:1"></span>
+            <span style="font-size:11px;color:var(--ink4);">tokens: </span>
+            <span id="tok-count" style="font-size:11px;font-weight:700;color:var(--rose);min-width:20px;">0</span>
+            <span class="embed-spill" id="dec-pill">idle</span>
+          </div>
+        </div>
       </div>
-      <div class="ah-title">The Memory Wall Is Strangling Your LLM: Why GPUs Are Faster Than We Think and Slower Than We Need</div>
-      <div class="ah-sub">A structural analysis of the 200x gap between theoretical and realized LLM throughput, with interactive demos of KV cache tradeoffs, speculative decoding, diffusion LLMs, and the roofline model.</div>
-      <span class="ah-cta">Read the interactive explainer →</span>
-    </a>
+    </div>
     <div class="blog-grid">
       <a href="https://medium.com/@iambeingferoz/designing-a-production-ready-mlops-workflow-from-mlflow-to-ci-cd-b8a2b34571fa" target="_blank" class="bc">
         <span class="bc-chip" style="background:var(--amber-l);color:var(--amber)">MLOps</span>
@@ -655,6 +698,150 @@ function addM(r, txt) {
 
 function showT(){const c=document.getElementById('cmsgs'),d=document.createElement('div');d.className='cm bot';d.id='typ';d.innerHTML='<div class="typ"><span class="td"></span><span class="td"></span><span class="td"></span></div>';c.appendChild(d);c.scrollTop=c.scrollHeight;}
 function remT(){const t=document.getElementById('typ');if(t)t.remove();}
+
+// =============================================
+// WIDGET 2: AR DECODE (embedded from blog article)
+// =============================================
+const DPR = window.devicePixelRatio || 1;
+const C = {
+  bg:'#faf9f7', surface:'#ffffff', s2:'#f3f2ef', s3:'#e9e7e2',
+  border:'rgba(0,0,0,0.09)', border2:'rgba(0,0,0,0.16)',
+  text:'#1c1b18', text2:'#54524b', text3:'#96938c',
+  accent:'#1a56db', teal:'#0f766e', amber:'#92400e',
+  coral:'#b91c1c', orange:'#c2410c',
+};
+
+function setupCanvas(id, h) {
+  const el = document.getElementById(id);
+  if (!el) return [null,0,0];
+  const W = el.parentElement.clientWidth || el.parentElement.parentElement.clientWidth || 400;
+  el.width = W * DPR; el.height = h * DPR;
+  el.style.width = W + 'px'; el.style.height = h + 'px';
+  const ctx = el.getContext('2d'); ctx.scale(DPR, DPR);
+  return [ctx, W, h];
+}
+function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.arcTo(x+w,y,x+w,y+r,r);ctx.lineTo(x+w,y+h-r);ctx.arcTo(x+w,y+h,x+w-r,y+h,r);ctx.lineTo(x+r,y+h);ctx.arcTo(x,y+h,x,y+h-r,r);ctx.lineTo(x,y+r);ctx.arcTo(x,y,x+r,y,r);ctx.closePath();}
+function txt(ctx,t,x,y,col,size,align='left',weight=''){ctx.fillStyle=col;ctx.font=(weight?weight+' ':'')+size+'px "DM Mono",monospace';ctx.textAlign=align;ctx.fillText(t,x,y);}
+function ease(t){return t<.5?2*t*t:-1+(4-2*t)*t;}
+
+let decRunning=false,decToks=[],decCount=0,decRAF,decStart=null,decProg=0;
+const DEC_N=20;
+
+function toggleDecode(){
+  if(decCount>=DEC_N) return;
+  decRunning=!decRunning;
+  const btn=document.getElementById('btn-decode');
+  const pill=document.getElementById('dec-pill');
+  btn.textContent=decRunning?'⏸ Pause':'▶ Resume';
+  pill.textContent=decRunning?'generating':'paused';
+  pill.className='embed-spill'+(decRunning?' run':'');
+  if(decRunning){if(!decStart)decStart=Date.now();animDecode();}
+}
+
+function resetDecode(){
+  decRunning=false;decToks=[];decCount=0;decStart=null;decProg=0;
+  cancelAnimationFrame(decRAF);
+  document.getElementById('btn-decode').textContent='▶ Generate';
+  document.getElementById('tok-count').textContent='0';
+  document.getElementById('dec-pill').textContent='idle';
+  document.getElementById('dec-pill').className='embed-spill';
+  drawDecodeFrame(0);
+}
+
+function drawDecodeFrame(prog){
+  const [ctx,W,H]=setupCanvas('c-decode',260);
+  if(!ctx) return;
+  ctx.clearRect(0,0,W,H);
+  const HX=14,HW=Math.floor(W*.38),PIPE_Y=90;
+  const SX=W*.5,SW=Math.floor(W*.18);
+  const CX=W*.72,CW=W-CX-14;
+
+  // HBM layers
+  txt(ctx,'HBM — model weights (16 GB)',HX,16,C.text2,9);
+  const nLayers=10;
+  for(let i=0;i<nLayers;i++){
+    const active=Math.floor(prog*nLayers)===i&&prog>0;
+    const sy=22+i*15;
+    ctx.fillStyle=active?'rgba(26,86,219,0.22)':'rgba(26,86,219,0.07)';
+    ctx.strokeStyle=active?C.accent:'rgba(26,86,219,0.18)';
+    ctx.lineWidth=active?1:.5;
+    rr(ctx,HX+2,sy,HW-4,11,3); ctx.fill(); ctx.stroke();
+    txt(ctx,active?'layer '+(i+1)+' — loading':'layer '+(i+1),HX+HW/2,sy+8,active?C.accent:C.text3,7,'center');
+  }
+
+  // Pipe
+  const pipeW=SX-(HX+HW);
+  ctx.fillStyle='rgba(146,64,14,0.06)';
+  rr(ctx,HX+HW,PIPE_Y-11,pipeW,22,4); ctx.fill();
+  ctx.strokeStyle='rgba(146,64,14,0.2)'; ctx.lineWidth=.5;
+  rr(ctx,HX+HW,PIPE_Y-11,pipeW,22,4); ctx.stroke();
+
+  if(prog>0.05&&prog<0.78){
+    const t=(prog-0.05)/0.73;
+    const px=HX+HW+pipeW*ease(t);
+    ctx.fillStyle=C.amber; ctx.shadowColor=C.amber; ctx.shadowBlur=8;
+    ctx.beginPath(); ctx.arc(px,PIPE_Y,5,0,Math.PI*2); ctx.fill();
+    ctx.shadowBlur=0;
+    txt(ctx,'16 GB transfer',HX+HW+pipeW/2,PIPE_Y-14,C.amber,8,'center');
+  }
+
+  // SRAM
+  ctx.fillStyle=C.s2; rr(ctx,SX,54,SW,76,7); ctx.fill();
+  ctx.strokeStyle='rgba(15,118,110,0.3)'; ctx.lineWidth=1; rr(ctx,SX,54,SW,76,7); ctx.stroke();
+  txt(ctx,'SRAM',SX+SW/2,72,C.teal,9,'center','500');
+  txt(ctx,'50 MB',SX+SW/2,86,C.text3,8,'center');
+
+  // Compute
+  const busy=prog>0.72;
+  ctx.fillStyle=busy?'rgba(26,86,219,0.09)':'rgba(185,28,28,0.05)';
+  ctx.strokeStyle=busy?'rgba(26,86,219,0.3)':'rgba(185,28,28,0.18)';
+  ctx.lineWidth=.5; rr(ctx,CX,44,CW,96,7); ctx.fill(); ctx.stroke();
+  txt(ctx,'Tensor cores',CX+CW/2,62,C.text2,8,'center');
+  ctx.fillStyle=busy?C.accent:C.coral;
+  ctx.font='500 11px "DM Mono"'; ctx.textAlign='center';
+  ctx.fillText(busy?'computing':'waiting',CX+CW/2,90);
+
+  // Output tokens
+  txt(ctx,'output tokens:',14,180,C.text3,9);
+  const cols=10,tw=Math.min(38,(W-28)/cols-2);
+  decToks.slice(-20).forEach((t,i)=>{
+    const tx=14+i*(tw+2),ty=188;
+    ctx.fillStyle='rgba(15,118,110,0.12)'; ctx.strokeStyle='rgba(15,118,110,0.3)'; ctx.lineWidth=.5;
+    rr(ctx,tx,ty,tw,16,3); ctx.fill(); ctx.stroke();
+    txt(ctx,'t'+t,tx+tw/2,ty+11,C.teal,8,'center');
+  });
+  if(prog>0.83&&decCount<DEC_N){
+    const a=(prog-0.83)/0.17, ni=decToks.length;
+    const tx=14+ni*(tw+2),ty=188;
+    ctx.globalAlpha=a;
+    ctx.fillStyle='rgba(26,86,219,0.15)'; ctx.strokeStyle=C.accent; ctx.lineWidth=.5;
+    rr(ctx,tx,ty,tw,16,3); ctx.fill(); ctx.stroke();
+    txt(ctx,'t'+(ni+1),tx+tw/2,ty+11,C.accent,8,'center');
+    ctx.globalAlpha=1;
+  }
+  txt(ctx,'Each token = full 16 GB sweep → ~200 tok/s ceiling',W/2,244,C.text3,9,'center');
+}
+
+function animDecode(){
+  if(!decRunning||decCount>=DEC_N) return;
+  decProg+=0.018;
+  if(decProg>=1){
+    decProg=0; decCount++;
+    decToks.push(decCount);
+    document.getElementById('tok-count').textContent=decCount;
+    if(decCount>=DEC_N){
+      decRunning=false;
+      document.getElementById('btn-decode').textContent='▶ Generate';
+      document.getElementById('dec-pill').textContent='done';
+      document.getElementById('dec-pill').className='embed-spill';
+    }
+  }
+  drawDecodeFrame(decProg);
+  if(decRunning) decRAF=requestAnimationFrame(animDecode);
+}
+
+window.addEventListener('load',()=>{ drawDecodeFrame(0); });
+window.addEventListener('resize',()=>{ drawDecodeFrame(decProg); });
 </script>
 </body>
 </html>
