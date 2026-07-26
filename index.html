@@ -78,6 +78,19 @@ nav{position:sticky;top:0;z-index:200;height:60px;padding:0 48px;display:flex;al
 .sb-n{background:var(--cream2);color:var(--ink2);border-color:var(--sand);}
 .tl-courses{font-size:11.5px;color:var(--ink3);font-weight:500;margin-top:5px;line-height:1.55;}
 
+/* ── Publications & Certifications band ── */
+.creds-band{background:var(--cream);border-bottom:1px solid var(--sand);}
+.creds-inner{max-width:1000px;margin:0 auto;padding:26px 48px 28px;}
+.creds-lbl{font-size:11px;font-weight:700;color:var(--ink4);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:14px;}
+.cred-row{display:flex;align-items:baseline;gap:20px;padding:11px 0;border-top:1px solid var(--cream3);}
+.cred-row:first-of-type{border-top:none;padding-top:0;}
+.cred-body{flex:1;min-width:0;}
+.cred-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.35;}
+.cred-title a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--rose-m);transition:color .18s,border-color .18s;}
+.cred-title a:hover{color:var(--rose);border-color:var(--rose);}
+.cred-org{font-size:12.5px;color:var(--ink3);font-weight:500;margin-top:2px;}
+.cred-year{font-size:10.5px;font-weight:700;color:var(--ink4);text-transform:uppercase;letter-spacing:.8px;white-space:nowrap;flex-shrink:0;}
+
 .sw{max-width:1000px;margin:0 auto;padding:72px 48px;}
 .eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--ink4);margin-bottom:10px;}
 .sh{font-family:'Lora',serif;font-size:36px;letter-spacing:-.8px;color:var(--ink);margin-bottom:40px;line-height:1.15;}
@@ -250,6 +263,12 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
   .sb-row{gap:6px;}
   .sb{font-size:12px;padding:5px 12px;white-space:normal;text-align:center;}
 
+  /* Credentials */
+  .creds-inner{padding:22px 20px 24px;}
+  .cred-row{flex-direction:column;gap:4px;align-items:flex-start;}
+  .cred-title{font-size:13.5px;}
+  .cred-year{margin-top:3px;}
+
   /* Projects */
   .sw{padding:48px 20px;}
   .sh{font-size:28px;margin-bottom:28px;}
@@ -326,11 +345,11 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
       <div class="hero-avi">FK</div>
       <div>
         <div class="hero-name">Feroz Khan</div>
-        <div class="hero-role"><span class="open-dot"></span>Graduate Data Scientist · IHME, Seattle, WA</div>
+        <div class="hero-role"><span class="open-dot"></span>Research Data Scientist · IHME, Seattle, WA</div>
       </div>
     </div>
     <h1 class="hero-hl">From Notebook<br>to <em>Production.</em></h1>
-    <p class="hero-bio">I am an ML Engineer and Data Scientist who loves building and evaluating models, and taking them from notebooks to production. At IHME, I delivered forecasts that drove global health publications for The Lancet and the World Bank.</p>
+    <p class="hero-bio">I am a Research Data Scientist focused on classical ML and GenAI applications who loves building and evaluating models and systems, and taking them from notebooks to production. At IHME, I delivered forecasts that drove global health publications for The Lancet and the World Bank.</p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-dark">See the work ↓</a>
       <a href="https://drive.google.com/drive/folders/1r66grJ7YAS4UBYX32mdgBNJfvxTGNN2G" target="_blank" class="btn btn-outline">📄 Resume</a>
@@ -342,7 +361,7 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
       <div class="tl-item">
         <div class="tl-dot" style="background:var(--teal)"></div>
         <div class="tl-period">Oct 2025 – Jun 2026</div>
-        <div class="tl-role">Graduate Data Scientist</div>
+        <div class="tl-role">Research Data Scientist</div>
         <div class="tl-org">Institute for Health Metrics and Evaluation (IHME), Seattle, WA</div>
       </div>
       <div class="tl-item">
@@ -377,6 +396,27 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
   </div>
 </div>
 
+<!-- PUBLICATIONS & CERTIFICATIONS -->
+<div class="creds-band">
+  <div class="creds-inner">
+    <div class="creds-lbl">Publications &amp; Certifications</div>
+    <div class="cred-row">
+      <div class="cred-body">
+        <div class="cred-title"><a href="https://www.credly.com/badges/8c0a3fb1-e88c-4706-94e5-93991c08a908" target="_blank" rel="noopener">AWS Certified Machine Learning Engineer – Associate</a></div>
+        <div class="cred-org">Amazon Web Services</div>
+      </div>
+      <div class="cred-year">2026</div>
+    </div>
+    <div class="cred-row">
+      <div class="cred-body">
+        <div class="cred-title">Co-Author, “The Lancet Commission on 21st Century Global Threats to Health”</div>
+        <div class="cred-org">The Lancet</div>
+      </div>
+      <div class="cred-year">Exp. Fall 2026</div>
+    </div>
+  </div>
+</div>
+
 <!-- PROJECTS: 4x1 featured, then 2x1 row -->
 <div class="sw" id="projects">
   <div class="eyebrow">Projects</div>
@@ -399,7 +439,7 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
         <div class="pc-footer">
           <a href="https://ferozk0333.github.io/Agentic-Dispute-Resolution-System-with-LangGraph-and-RAG/" target="_blank" class="pc-link" style="color:var(--rose)" onclick="e(event)">Project Explainer →</a>
           <a href="https://github.com/ferozk0333/Agentic-Dispute-Resolution-System-with-LangGraph-and-RAG" target="_blank" class="pc-link" style="color:var(--ink3)" onclick="e(event)">GitHub →</a>
-          <button class="pc-expand" onclick="tBtn(event,this)">Details <span class="arr">▾</span></button>
+          <button class="pc-expand" onclick="tBtn(event,this)">Details &amp; Demo <span class="arr">▾</span></button>
         </div>
       </div>
       <div class="pc-detail">
