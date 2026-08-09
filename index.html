@@ -507,6 +507,9 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
           <span class="pct" style="background:var(--teal-l);color:var(--teal)">Terraform</span>
           <span class="pct" style="background:var(--plum-l);color:var(--plum)">MLOps</span>
           <span class="pct" style="background:var(--rose-l);color:var(--rose)">Fraud Detection</span>
+          <span class="pct" style="background:var(--green-l);color:var(--plum)">XGBOOST</span>
+          <span class="pct" style="background:var(--cream2);color:var(--rose)">Random Forest</span>
+          <span class="pct" style="background:var(--rose-l);color:var(--rose)">Gradient Boosting</span>
         </div>
         <div class="pc-footer">
           <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--amber)" onclick="e(event)">GitHub &rarr;</a>
@@ -539,14 +542,14 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
 
         <div class="detail-cols">
           <div class="dc"><h4>Pipeline &amp; Decisions</h4><ul>
-            <li>Four algorithms tuned with SageMaker AMT, using Bayesian search kept at low parallelism so trials could learn from each other</li>
+            <li>4 algorithms tuned with SageMaker AMT, using Bayesian search so trials could learn from each other</li>
             <li>Chose PR-AUC over accuracy and ROC-AUC for imbalanced data</li>
             <li>Deduplicated before splitting, and fit the scaler on training data only to avoid leakage</li>
             <li>Re-scored every model on the same held-out test set for a fair comparison</li>
             <li>Least-privilege IAM, with one scoped role per component rather than a blanket policy</li>
           </ul></div>
           <div class="dc"><h4>Deployment &amp; Serving</h4><ul>
-            <li>Best model promoted through SageMaker Model Registry with manual approval</li>
+            <li>Best model promoted through SageMaker Model Registry</li>
             <li>Served on a serverless endpoint, so there is no cost while idle</li>
             <li>Endpoint accepts raw transaction fields and runs feature engineering inside the container</li>
             <li>REST API Gateway with an API key from Secrets Manager, plus WAF rate limiting</li>
