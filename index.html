@@ -127,6 +127,15 @@ nav{position:sticky;top:0;z-index:200;height:60px;padding:0 48px;display:flex;al
 .res-box h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;}
 .res-box p{font-size:12.5px;line-height:1.55;}
 
+/* ── Project detail figures ── */
+.pc-figs{display:flex;flex-direction:column;gap:18px;margin:18px 0;}
+.pc-fig{background:var(--white);border:1px solid var(--cream3);border-radius:16px;overflow:hidden;box-shadow:var(--sh1);}
+.pc-fig-cap{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink3);padding:12px 16px 0;}
+.pc-fig-sub{font-size:12px;color:var(--ink2);line-height:1.5;padding:4px 16px 12px;}
+.pc-fig img{display:block;width:100%;height:auto;border-top:1px solid var(--cream2);background:var(--white);}
+.pc-figs-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:640px){.pc-figs-2{grid-template-columns:1fr;}}
+
 .writing-wrap{background:white;border-top:1px solid var(--sand);border-bottom:1px solid var(--sand);}
 .writing-inner{max-width:1000px;margin:0 auto;padding:72px 48px;}
 
@@ -487,6 +496,83 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
       </div>
     </div>
 
+    <!-- 2 Fraud Detection ML Platform on AWS -->
+    <div class="pc" onclick="togglePC(this)">
+      <div class="pc-main">
+        <h3 class="pc-title">Fraud Detection ML Platform on AWS</h3>
+        <p class="pc-sub">SageMaker · Terraform · API Gateway · WAF · MLflow · Model Registry</p>
+        <p class="pc-desc">End-to-end fraud detection system on a heavily imbalanced credit card dataset. Tuned four algorithms with SageMaker Automatic Model Tuning, then deployed the winner behind a secured serverless endpoint. The whole stack is provisioned with Terraform.</p>
+        <div class="pc-tags">
+          <span class="pct" style="background:var(--amber-l);color:var(--amber)">SageMaker</span>
+          <span class="pct" style="background:var(--teal-l);color:var(--teal)">Terraform</span>
+          <span class="pct" style="background:var(--plum-l);color:var(--plum)">MLOps</span>
+          <span class="pct" style="background:var(--rose-l);color:var(--rose)">Fraud Detection</span>
+        </div>
+        <div class="pc-footer">
+          <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--amber)" onclick="e(event)">GitHub &rarr;</a>
+          <button class="pc-expand" onclick="tBtn(event,this)">Details &amp; Architecture <span class="arr">&#9662;</span></button>
+        </div>
+      </div>
+      <div class="pc-detail">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;border-bottom:1px solid var(--cream3);padding-bottom:14px;">
+          <div style="text-align:center;padding:10px 6px;background:var(--amber-l);border-radius:12px;">
+            <div style="font-family:'Lora',serif;font-size:22px;color:var(--amber);font-weight:600;">0.829</div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-top:2px;">Test PR-AUC</div>
+          </div>
+          <div style="text-align:center;padding:10px 6px;background:var(--teal-l);border-radius:12px;">
+            <div style="font-family:'Lora',serif;font-size:22px;color:var(--teal);font-weight:600;">94% / 72%</div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-top:2px;">Precision / Recall</div>
+          </div>
+          <div style="text-align:center;padding:10px 6px;background:var(--plum-l);border-radius:12px;">
+            <div style="font-family:'Lora',serif;font-size:22px;color:var(--plum);font-weight:600;">Serverless</div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-top:2px;">Inference Endpoint</div>
+          </div>
+        </div>
+
+        <div class="pc-figs">
+          <div class="pc-fig">
+            <div class="pc-fig-cap">Architecture</div>
+            <div class="pc-fig-sub">Raw transactions land in S3, a SageMaker Processing job cleans and splits them, and four algorithms are tuned in parallel. The winning model is registered and served behind API Gateway and WAF, with CloudWatch alarms feeding SNS. Every layer is provisioned with Terraform.</div>
+            <img src="https://ferozk0333.github.io/assets/images/aws_architecture_fraud_detection.png" alt="AWS architecture diagram for the fraud detection ML platform" loading="lazy">
+          </div>
+        </div>
+
+        <div class="detail-cols">
+          <div class="dc"><h4>Pipeline &amp; Decisions</h4><ul>
+            <li>Four algorithms tuned with SageMaker AMT, using Bayesian search kept at low parallelism so trials could learn from each other</li>
+            <li>Chose PR-AUC over accuracy and ROC-AUC for imbalanced data</li>
+            <li>Deduplicated before splitting, and fit the scaler on training data only to avoid leakage</li>
+            <li>Re-scored every model on the same held-out test set for a fair comparison</li>
+            <li>Least-privilege IAM, with one scoped role per component rather than a blanket policy</li>
+          </ul></div>
+          <div class="dc"><h4>Deployment &amp; Serving</h4><ul>
+            <li>Best model promoted through SageMaker Model Registry with manual approval</li>
+            <li>Served on a serverless endpoint, so there is no cost while idle</li>
+            <li>Endpoint accepts raw transaction fields and runs feature engineering inside the container</li>
+            <li>REST API Gateway with an API key from Secrets Manager, plus WAF rate limiting</li>
+            <li>CloudWatch metrics and alarms wired through to SNS</li>
+          </ul></div>
+        </div>
+
+        <div class="pc-figs">
+          <div class="pc-fig">
+            <div class="pc-fig-cap">Model Comparison: ROC vs Precision&ndash;Recall</div>
+            <div class="pc-fig-sub">On ROC (left) all four models look almost identical. On Precision&ndash;Recall (right) the linear model falls well behind while the tree models hold up. That gap is why PR-AUC drove the decision on such imbalanced data.</div>
+            <img src="https://ferozk0333.github.io/assets/images/pr-vs-roc.png" alt="ROC and Precision-Recall curves comparing four models" loading="lazy">
+          </div>
+          <div class="pc-fig">
+            <div class="pc-fig-cap">AMT Tuning Convergence</div>
+            <div class="pc-fig-sub">Best objective so far across each tuning job.</div>
+            <img src="https://ferozk0333.github.io/assets/images/tuning-convergence.png" alt="Hyperparameter tuning convergence across four algorithms" loading="lazy">
+          </div>
+        </div>
+
+        <div class="res-box" style="background:var(--amber-l);border:1.5px solid var(--amber-m)">
+          <div><h4 style="color:var(--amber)">Result</h4><p style="color:var(--ink2)">HistGradientBoosting won with a test PR-AUC of 0.829, reaching 94% precision at 72% recall. The full tuning sweep cost under a dollar, and the serverless endpoint costs nothing while idle.</p></div>
+        </div>
+      </div>
+    </div>
+
     <!-- 1 Agentic RAG -->
     <div class="pc" onclick="togglePC(this)">
       <div class="pc-main">
@@ -563,43 +649,6 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
       </div>
     </div>
 
-    <!-- 3 SageMaker -->
-    <div class="pc" onclick="togglePC(this)">
-      <div class="pc-main">
-        <h3 class="pc-title">AWS SageMaker End-to-End ML Pipeline</h3>
-        <p class="pc-sub">AWS SageMaker · S3 · IAM · Random Forest · Spot Instances</p>
-        <p class="pc-desc">Fraud detection classifier on 50K rows and 30+ features. Ran 30+ hyperparameter experiments with built-in tracking. Spot instances cut training costs by 60%.</p>
-        <div class="pc-tags">
-          <span class="pct" style="background:var(--amber-l);color:var(--amber)">SageMaker</span>
-          <span class="pct" style="background:var(--teal-l);color:var(--teal)">Random Forest</span>
-          <span class="pct" style="background:var(--plum-l);color:var(--plum)">MLOps</span>
-          <span class="pct" style="background:var(--rose-l);color:var(--rose)">Fraud Detection</span>
-        </div>
-        <div class="pc-footer">
-          <a href="https://github.com/ferozk0333" target="_blank" class="pc-link" style="color:var(--amber)" onclick="e(event)">GitHub →</a>
-          <button class="pc-expand" onclick="tBtn(event,this)">Details <span class="arr">▾</span></button>
-        </div>
-      </div>
-      <div class="pc-detail">
-        <div class="detail-cols">
-          <div class="dc"><h4>Pipeline</h4><ul>
-            <li>50K rows, 30+ features on SageMaker with S3 + IAM</li>
-            <li>Random Forest vs Logistic Regression baseline</li>
-            <li>30+ hyperparameter experiments, automated logging</li>
-            <li>Spot instance training for 60% cost reduction</li>
-          </ul></div>
-          <div class="dc"><h4>Outcomes</h4><ul>
-            <li>Accuracy: 80% to 95%, +15 points over LR baseline</li>
-            <li>AUC-PR improved to 0.85</li>
-            <li>Full experiment tracking across all 30+ runs</li>
-            <li>Production-ready deployment pipeline</li>
-          </ul></div>
-        </div>
-        <div class="res-box" style="background:var(--amber-l);border:1.5px solid var(--amber-m)">
-          <div><h4 style="color:var(--amber)">Result</h4><p style="color:var(--ink2)">95% accuracy and AUC-PR 0.85. SageMaker Spot instances cut training costs 60% with automated tracking across 30+ experiment runs.</p></div>
-        </div>
-      </div>
-    </div>
 
     <!-- 4 CNN -->
     <div class="pc" onclick="togglePC(this)">
