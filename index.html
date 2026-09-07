@@ -500,13 +500,13 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
     <div class="pc" onclick="togglePC(this)">
       <div class="pc-main">
         <h3 class="pc-title">Multi-Tool Agentic Orchestration over MCP</h3>
-        <p class="pc-sub">MCP · Retrieval Routing · Claude · FastAPI · React · BM25 + Dense</p>
-        <p class="pc-desc">504 tools across 11 custom MCP servers, routed down to 12 per query. Sending every schema costs roughly 60k tokens before the user has asked anything, which degrades selection accuracy and latency. Retrieval brings that to 1.8k, with a live trace of every routing decision and tool call.</p>
+        <p class="pc-sub">MCP · Retrieval Routing · FastAPI · BM25 + Dense Search</p>
+        <p class="pc-desc">Sending every tool schema from 500+ tools costs roughly 60k tokens in context stuffing before the user has asked anything, which degrades selection accuracy and latency. Orchestrator-router agentic pattern dynamically retrieves relevant tools using vector search, bringing token stuffing down to 1.8k, with a live trace of every routing decision and tool call.</p>
         <div class="pc-tags">
-          <span class="pct" style="background:var(--plum-l);color:var(--plum)">MCP</span>
-          <span class="pct" style="background:var(--teal-l);color:var(--teal)">Retrieval Routing</span>
-          <span class="pct" style="background:var(--rose-l);color:var(--rose)">Claude</span>
-          <span class="pct" style="background:var(--amber-l);color:var(--amber)">Hybrid Search</span>
+          <span class="pct" style="background:var(--plum-l);color:var(--plum)">MCP Server</span>
+          <span class="pct" style="background:var(--teal-l);color:var(--teal)">Orchestrator Router Pattern</span>
+          <span class="pct" style="background:var(--rose-l);color:var(--rose)">Human in the Loop</span>
+          <span class="pct" style="background:var(--amber-l);color:var(--amber)">Vector Search</span>
           <span class="pct" style="background:var(--cream2);color:var(--ink2)">FastAPI</span>
         </div>
         <div class="pc-footer">
@@ -518,36 +518,36 @@ footer{max-width:1000px;margin:0 auto;padding:24px 48px;border-top:1px solid var
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;border-bottom:1px solid var(--cream3);padding-bottom:14px;">
           <div style="text-align:center;padding:10px 6px;background:var(--plum-l);border-radius:12px;">
             <div style="font-family:'Lora',serif;font-size:22px;color:var(--plum);font-weight:600;">97%</div>
-            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-top:2px;">Token Reduction</div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-top:2px;">Prompt Token Reduction</div>
           </div>
           <div style="text-align:center;padding:10px 6px;background:var(--teal-l);border-radius:12px;">
             <div style="font-family:'Lora',serif;font-size:22px;color:var(--teal);font-weight:600;">91.7%</div>
             <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-top:2px;">Recall@12</div>
           </div>
           <div style="text-align:center;padding:10px 6px;background:var(--amber-l);border-radius:12px;">
-            <div style="font-family:'Lora',serif;font-size:22px;color:var(--amber);font-weight:600;">504 &rarr; 12</div>
+            <div style="font-family:'Lora',serif;font-size:22px;color:var(--amber);font-weight:600;">From 504 &rarr; 12</div>
             <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-top:2px;">Tools Per Query</div>
           </div>
         </div>
         <div class="detail-cols">
           <div class="dc"><h4>How Routing Works</h4><ul>
-            <li>The model starts with zero catalogue tools, plus two synthetic ones it can call to request tools or ask the user a question</li>
-            <li>The router is a search index rather than a model, ranking 504 schemas in about 7ms</li>
+            <li>The model starts with zero catalogue tools, and the orchestrator decides based on user query whether to call external tools, seek user clarification or generate a response</li>
+            <li>The router is a search index, ranking 504 schemas in about 7ms using vector similarity</li>
             <li>Retrieved tools stay loaded, so follow-up questions cost no retrieval at all</li>
           </ul></div>
-          <div class="dc"><h4>Key Engineering Decisions</h4><ul>
-            <li>Retrieval runs on the capability the model asks for, not the raw question. The needed tool was absent from raw-query results even at k=40, and ranked 3rd on the stated need</li>
+          <div class="dc"><h4>Design Choices</h4><ul>
+            <li>11 MCP servers with a cumulative 500+ tools</li>
             <li>Conditional retry: timeouts and transport failures retry, validation errors do not, since they fail identically every time</li>
             <li>A server that dies has its tools dropped from the index and reconnects in the background</li>
           </ul></div>
         </div>
         <div class="res-box" style="background:var(--plum-l);border:1.5px solid var(--plum)">
-          <div><h4 style="color:var(--plum)">Result</h4><p style="color:var(--ink2)">Built the standard BM25 and dense hybrid, measured it against each retriever alone on 60 labelled queries, and it lost. Dense alone scored 90.0% against the hybrid's 83.3%, because rank fusion weights a weak lexical match the same as a strong one, so noise outvoted correct dense hits. Default switched to dense on the evidence.</p></div>
+          <div><h4 style="color:var(--plum)">Result</h4><p style="color:var(--ink2)">Given a user query, the agent performs embedding similarity and BM25 retrieval on tool schemas and seeks human clarification via HITL methods. Selects 12 relevant tools (instead of all 504) leading to better cost and latency, and reduced hallucinations.</p></div>
         </div>
         <div class="pc-figs">
           <div class="pc-fig">
             <div class="pc-fig-cap">Architecture</div>
-            <div class="pc-fig-sub">Eleven MCP servers start as stdio subprocesses and report their tools. The client aggregates all 504 into one dense index. Per query the model asks for what it needs, the router returns the top 12, and calls are dispatched back through the pool with bounded concurrency and conditional retry.</div>
+  
             <img src="https://ferozk0333.github.io/assets/images/mcp_router_architecture.png" alt="Architecture diagram for the MCP tool router" loading="lazy">
           </div>
           <div class="pc-fig">
